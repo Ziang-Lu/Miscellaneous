@@ -22,10 +22,10 @@ class TestDict(unittest.TestCase):
 
     def tearDown(self):
         """
-        This method will be called to tear down the testing environment for each
+        This method will be called to clean up the testing environment for each
         single test.
-        e.g., If a single test requires connecting to a database, we can close
-        the connection in this tearDown() method.
+        e.g., If a single test connects to a database, we can close the
+        connection in this tearDown() method.
         """
         print('Tearing down the single test...')
 
