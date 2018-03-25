@@ -35,6 +35,7 @@ public class TestJunitAnnotation {
     }
 
     @Ignore
+    @Test
     public void test3() {
         System.out.println("This test should be ignored and not executed.");
     }
