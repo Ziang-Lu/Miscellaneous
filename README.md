@@ -1,1 +1,5 @@
-# Debugging
+# Debugging Tools
+
+* Logging
+* Unit tests
+
