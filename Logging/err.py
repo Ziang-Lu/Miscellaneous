@@ -1,6 +1,8 @@
 #!usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+__author__ = 'Ziang Lu'
+
 import logging
 # Set the level of the logging messages to print
 logging.basicConfig(level=logging.INFO)
