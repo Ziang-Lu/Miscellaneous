@@ -112,3 +112,8 @@ set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
 
+" Settings for vim-json
+" (Better display JSON files)
+" cd ~/.vim/bundle
+" git clone git@github.com:elzr/vim-json.git
+
