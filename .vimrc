@@ -96,7 +96,14 @@ call pathogen#infect()
 " git clone git://github.com/Lokaltog/vim-powerline.git
 set laststatus=2
 
-" Setting for ctrlp
+" Settings for nerdtree
+" (Shows the project structure)
+" cd ~/.vim/bundle
+" git clone git@github.com:scrooloose/nerdtree.git
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Settings for ctrlp
 " (Quickly navigate through files and open files)
 " cd ~/.vim/bundle
 " git clone https://github.com/kien/ctrlp.vim.git
@@ -104,6 +111,4 @@ let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
-
-
 
