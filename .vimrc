@@ -112,6 +112,11 @@ set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
 
+" Settings for Python foldering
+" mkdir -p ~/.vim/ftplugin
+" wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
+set nofoldenable
+
 " Settings for vim-json
 " (Better display JSON files)
 " cd ~/.vim/bundle
