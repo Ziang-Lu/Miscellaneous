@@ -74,6 +74,9 @@ set clipboard=unnamed
 set showmode
 
 " Set colorscheme
+" mkdir -p ~/.vim/colors && cd ~/.vim/colors
+" wget -O wombat256mod.vim
+" http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_Co=256
 color wombat256mod
 
@@ -81,4 +84,26 @@ color wombat256mod
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Setup Pathogen to manage plugins
+" mkdir -p ~/.vim/autoload ~/.vim/bundle
+" curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+call pathogen#infect()
+
+" Settings for vim-powerline
+" (Display the current mode and current file)
+" cd ~/.vim/bundle
+" git clone git://github.com/Lokaltog/vim-powerline.git
+set laststatus=2
+
+" Setting for ctrlp
+" (Quickly navigate through files and open files)
+" cd ~/.vim/bundle
+" git clone https://github.com/kien/ctrlp.vim.git
+let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=*/coverage/*
+
+
 
