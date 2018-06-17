@@ -112,6 +112,10 @@ set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
 
+" Settings for Auto Pairs
+" cd ~/.vim/bundle
+" git clone git://github.com/jiangmiao/auto-pairs.git ~/.vim/bundle/auto-pairs
+
 " Settings for Python foldering
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
