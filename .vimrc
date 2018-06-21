@@ -57,7 +57,7 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 " Allow folding
 set foldenable
 
-" Enable mouse
+" Enable eouse
 set mouse=a
 
 " Ignore upper/lower case when searching
@@ -115,6 +115,13 @@ set wildignore+=*/coverage/*
 " Settings for Auto Pairs
 " cd ~/.vim/bundle
 " git clone git://github.com/jiangmiao/auto-pairs.git ~/.vim/bundle/auto-pairs
+
+" Settings for Jedi-Vim
+" cd ~/.vim/bundle
+" git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
+" cd ~/.vim/bundle/jedi-vim
+" git submodule update --init
+let g:jedi#use_tabs_not_buffers = 1
 
 " Settings for Python foldering
 " mkdir -p ~/.vim/ftplugin
