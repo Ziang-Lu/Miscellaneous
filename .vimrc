@@ -128,6 +128,14 @@ let g:jedi#use_tabs_not_buffers = 1
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 set nofoldenable
 
+" Settings for Python indent guides
+" cd ~/.vim/bundle
+" git clone git://github.com/nathanaelkane/vim-indent-guides.git
+set ts=4 sw=4 et
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
 " Settings for vim-json
 " (Better display JSON files)
 " cd ~/.vim/bundle
