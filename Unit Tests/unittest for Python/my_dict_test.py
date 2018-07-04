@@ -4,6 +4,7 @@
 __author__ = 'Ziang Lu'
 
 import unittest
+
 from my_dict import MyDict
 
 
@@ -29,7 +30,7 @@ class TestDict(unittest.TestCase):
         """
         print('Tearing down the single test...')
 
-    def test_init(self):
+    def test_init(self) -> None:
         """
         Any single method starts with "test" will be tested by the framework.
         """
@@ -38,23 +39,23 @@ class TestDict(unittest.TestCase):
         self.assertEqual(d.a, 1)
         self.assertEqual(d.b, 'test')
 
-    def test_key(self):
+    def test_key(self) -> None:
         d = MyDict()
         d['key'] = 'value'
         self.assertEqual(d.key, 'value')
 
-    def test_keyerror(self):
+    def test_keyerror(self) -> None:
         d = MyDict()
         with self.assertRaises(KeyError):
             val = d['key']
 
-    def test_attr(self):
+    def test_attr(self) -> None:
         d = MyDict()
         d.key = 'value'
         self.assertTrue('key' in d)
         self.assertEqual(d['key'], 'value')
 
-    def test_attrerror(self):
+    def test_attrerror(self) -> None:
         d = MyDict()
         with self.assertRaises(AttributeError):
             val = d.key
