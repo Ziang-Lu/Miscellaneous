@@ -4,11 +4,12 @@
 __author__ = 'Ziang Lu'
 
 import logging
+
 # Set the level of the logging messages to print
 logging.basicConfig(level=logging.INFO)
 
 
-def foo(s):
+def foo(s: str) -> float:
     n = int(s)
     logging.info('n = %d' % n)
     return 10 / n
