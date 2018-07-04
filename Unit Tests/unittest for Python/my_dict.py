@@ -3,6 +3,8 @@
 
 __author__ = 'Ziang Lu'
 
+from typing import Any
+
 
 class MyDict(dict):
     """
@@ -12,7 +14,7 @@ class MyDict(dict):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    def __getattr__(self, key):
+    def __getattr__(self, key: Any) -> Any:
         try:
             return self[key]
         except KeyError:
@@ -20,5 +22,5 @@ class MyDict(dict):
             # ArributeError
             raise AttributeError("'Dict' object has no attribute '%s'" % key)
 
-    def __setattr__(self, key, val):
+    def __setattr__(self, key: Any, val: Any) -> None:
         self[key] = val
