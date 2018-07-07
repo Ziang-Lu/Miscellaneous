@@ -4,8 +4,6 @@
 * Git auto-completion script
   * `brew install bash-completion`
 
-  * Copy `git-completion.bash` to the home directory
-
   * Copy `git-completion.bash` to `/opt/local/etc/bash_completion.d/`
 
   * Add the following to `~/.bash_profile`:
