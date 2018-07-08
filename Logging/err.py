@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 
 def foo(s: str) -> float:
     n = int(s)
-    logging.info('n = %d' % n)
+    logging.info('n = {}'.format(n))
     return 10 / n
 
 
