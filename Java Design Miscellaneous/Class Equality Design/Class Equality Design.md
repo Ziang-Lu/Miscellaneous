@@ -1,5 +1,10 @@
 # Class Equality Design
 
+Notes from:
+http://www.angelikalanger.com/Articles/JavaSolutions/SecretsOfEquals/Equals.html
+
+<br>
+
 ## Entity Types and Value Types:
 
 * Entity Type
