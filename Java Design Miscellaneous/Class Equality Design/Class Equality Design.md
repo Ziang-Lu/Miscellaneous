@@ -68,7 +68,7 @@ class Point2D {
     }
 }
 
-class Point3D {
+class Point3D extends {
     private final int z;
 
     Point3D(int x, int y, int z) {
@@ -90,22 +90,22 @@ class Point3D {
     }
 }
 
-public class PointTest {
+public class InstanceofIncorrect {
 
     public static void main(String[] args) {
         Point2D origin = new Point2D(0, 0);
         Point3D p1 = new Point3D(0, 0, -1);
         Point3D p2 = new Point3D(0, 0, 1);
 
-        System.out.println("Comparing origin and p1 ...")
+        System.out.println("Comparing origin and p1 ...");
         System.out.println(origin.equals(p1));
         System.out.println(p1.equals(origin));
 
-        System.out.println("Comparing origin and p2 ...")
+        System.out.println("Comparing origin and p2 ...");
         System.out.println(origin.equals(p2));
         System.out.println(p2.equals(origin));
 
-        System.out.println("Comparing p1 and p2 ...")
+        System.out.println("Comparing p1 and p2 ...");
         System.out.println(p1.equals(p2));
         System.out.println(p2.equals(p1));
     }
@@ -191,7 +191,7 @@ class Point2D {
     }
 }
 
-class Point3D {
+class Point3D extends Point2D {
     private final int z;
 
     Point3D(int x, int y, int z) {
@@ -213,22 +213,22 @@ class Point3D {
     }
 }
 
-public class PointTest {
+public class GetClassCorrect {
 
     public static void main(String[] args) {
         Point2D origin = new Point2D(0, 0);
         Point3D p1 = new Point3D(0, 0, -1);
         Point3D p2 = new Point3D(0, 0, 1);
 
-        System.out.println("Comparing origin and p1 ...")
+        System.out.println("Comparing origin and p1 ...");
         System.out.println(origin.equals(p1));
         System.out.println(p1.equals(origin));
 
-        System.out.println("Comparing origin and p2 ...")
+        System.out.println("Comparing origin and p2 ...");
         System.out.println(origin.equals(p2));
         System.out.println(p2.equals(origin));
 
-        System.out.println("Comparing p1 and p2 ...")
+        System.out.println("Comparing p1 and p2 ...");
         System.out.println(p1.equals(p2));
         System.out.println(p2.equals(p1));
     }
@@ -278,7 +278,9 @@ Use **`getClass()`** test.  =>.  Disallow mixed-type comparison, and thus is **p
 
     As the designer of the current class, in order to avoid symmetry and transitivity problem, we need to make sure that subclasses only adds functionalities or fields that are not relevant to equality check by **declaring our `equals()` method as `final` to avoid it being overriden in the subclasses**.
 
-    See below for the corresponding correct implementation.
+    However, this sometimes leads to some **bad semantics**.
+
+    See below for the corresponding implementation.
 
   * **`getClass()`**
 
@@ -308,7 +310,7 @@ class Point2D {
     }
 }
 
-class Point3D {
+class Point3D extends Point2D {
     private final int z;
 
     Point3D(int x, int y, int z) {
@@ -317,22 +319,22 @@ class Point3D {
     }
 }
 
-public class PointTest {
+public class InstanceofCorrect {
 
     public static void main(String[] args) {
         Point2D origin = new Point2D(0, 0);
         Point3D p1 = new Point3D(0, 0, -1);
         Point3D p2 = new Point3D(0, 0, 1);
 
-        System.out.println("Comparing origin and p1 ...")
+        System.out.println("Comparing origin and p1 ...");
         System.out.println(origin.equals(p1));
         System.out.println(p1.equals(origin));
 
-        System.out.println("Comparing origin and p2 ...")
+        System.out.println("Comparing origin and p2 ...");
         System.out.println(origin.equals(p2));
         System.out.println(p2.equals(origin));
 
-        System.out.println("Comparing p1 and p2 ...")
+        System.out.println("Comparing p1 and p2 ...");
         System.out.println(p1.equals(p2));
         System.out.println(p2.equals(p1));
     }
