@@ -11,6 +11,22 @@ class MySuperClass {
     protected boolean navigateClassHierarchyAndCheckEquality(Object o, boolean otherBranch) {
         return true;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        // Preliminary checks
+        // Reflexive
+        if (o == this) {
+            return true;
+        }
+        // Check whether this and o are in the same class hierarchy
+        if (!(o instanceof MySuperClass)) {
+            return false;
+        }
+
+        // Delegate to navigateClassHierarchyAndCheckEquality() method
+        return navigateClassHierarchyAndCheckEquality(o, false);
+    }
 }
 
 class MyClass extends MySuperClass {
@@ -59,7 +75,9 @@ class MyClass extends MySuperClass {
             // Delegate to superclass
             return super.navigateClassHierarchyAndCheckEquality(o, otherBranch);
         }
-        if ((o instanceof MyClass) && (!otherBranch)) { // Case 3
+        if ((getClass().isAssignableFrom(o.getClass())) && (!otherBranch)) { // Case 3
+            // The reason we discard the 'instanceof' test is because it will lead to this method being overwritten in
+            // each subclass for testing against the corresponding type.
             // Switch the roles of this and o
             return ((MyClass) o).navigateClassHierarchyAndCheckEquality(this, true);
         } else { // Case 2 & 4
@@ -93,22 +111,6 @@ class MyClass extends MySuperClass {
             // Only check the subclass-specific parts against default values
             return (field1 == FIELD_1_DEFAULT) && (field2 == FIELD_2_DEFAULT);
         }
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        // Preliminary checks
-        // Reflexive
-        if (o == this) {
-            return true;
-        }
-        // Check whether this and o are in the same class hierarchy
-        if (!(o instanceof MySuperClass)) {
-            return false;
-        }
-
-        // Delegate to navigateClassHierarchyAndCheckEquality() method
-        return navigateClassHierarchyAndCheckEquality(o, false);
     }
 }
 
