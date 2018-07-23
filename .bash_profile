@@ -4,7 +4,7 @@ parse_git_branch() {
 }
 
 # Setting prompt text & color
-export PS1="\e[0;32m [Captain \w] $(parse_git_branch) \$ \[\e[0m\]"
+export PS1="\e[0;32m [Captain \w]$(parse_git_branch) \$ \[\e[0m\]"
 
 alias ll="ls -al"
 alias hi="history"
