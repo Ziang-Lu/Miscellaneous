@@ -1,10 +1,5 @@
-# Setting Git branch display
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 # Setting prompt text & color
-export PS1="\e[0;32m [Captain \w]$(parse_git_branch) \$ \[\e[0m\]"
+export PS1="\e[0;32m [Captain \w] \$ \[\e[0m\]"
 
 alias ll="ls -al"
 alias hi="history"
