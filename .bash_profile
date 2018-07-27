@@ -5,8 +5,6 @@ alias ll="ls -al"
 alias hi="history"
 alias vi="vim"
 alias shuf="gshuf"
-# Hard-code for pip installation location
-alias pip="/usr/local/bin/pip"
 
 # Setting listing colors
 export CLICOLOR=1
@@ -28,11 +26,6 @@ export PATH
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools 
-
-# Setting Git auto-completion
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
-fi
 
 # Setting for Node Version Manager (NVM)
 export NVM_DIR="$HOME/.nvm"
