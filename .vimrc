@@ -132,7 +132,7 @@ set nofoldenable
 " Settings for Python-mode
 " cd ~/.vim/bundle
 " git clone --recursive https://github.com/python-mode/python-mode
-let g:pymode-python='python3'
+let g:pymode_python='python3'
 
 " Settings for Python indent guides
 " cd ~/.vim/bundle
