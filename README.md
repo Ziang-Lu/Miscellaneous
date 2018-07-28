@@ -9,8 +9,6 @@
 * My vim configuration
   * Follow the instructions to create the directiories and install the corresponding plugins in the comments
 
-* My IDE settings
-
 * Logging
 
 * Unit tests
