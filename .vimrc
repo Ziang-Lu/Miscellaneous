@@ -89,6 +89,7 @@ set noswapfile
 " mkdir -p ~/.vim/autoload ~/.vim/bundle
 " curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 call pathogen#infect()
+call pathogen#helptags()
 
 " Settings for vim-powerline
 " (Display the current mode and current file)
@@ -127,6 +128,11 @@ let g:jedi#use_tabs_not_buffers = 1
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 set nofoldenable
+
+" Settings for Python-mode
+" cd ~/.vim/bundle
+" git clone --recursive https://github.com/python-mode/python-mode
+let g:pymode-python='python3'
 
 " Settings for Python indent guides
 " cd ~/.vim/bundle
