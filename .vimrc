@@ -129,11 +129,6 @@ let g:jedi#use_tabs_not_buffers = 1
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 set nofoldenable
 
-" Settings for Python-mode
-" cd ~/.vim/bundle
-" git clone --recursive https://github.com/python-mode/python-mode
-let g:pymode_python='python3'
-
 " Settings for Python indent guides
 " cd ~/.vim/bundle
 " git clone git://github.com/nathanaelkane/vim-indent-guides.git
@@ -146,4 +141,3 @@ let g:indent_guides_guide_size = 1
 " (Better display JSON files)
 " cd ~/.vim/bundle
 " git clone git@github.com:elzr/vim-json.git
-
