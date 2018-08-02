@@ -8,8 +8,6 @@ alias hi="history"
 alias vi="vim"
 alias sed="gsed"
 alias shuf="gshuf"
-# Hard-code for pip installation location
-alias pip="/usr/local/bin/pip"
 
 # Setting listing colors
 export CLICOLOR=1
