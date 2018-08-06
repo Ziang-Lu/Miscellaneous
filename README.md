@@ -13,6 +13,7 @@
   * CodeGlance
   * Presentation Assistant
   * IdeaVim
+  * Checkstyle   *(IntelliJ IDEA & Android Studio)*
   * Save Actions
   * JSON Viewer
 * Logging
