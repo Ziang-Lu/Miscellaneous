@@ -9,6 +9,12 @@
   * Follow the instructions to create the directiories and install the corresponding plugins in the comments
 * My Pylint configuration
   * Check out `.pylintrc`
+* IntelliJ Plugins
+  * CodeGlance
+  * Presentation Assistant
+  * IdeaVim
+  * Save Actions
+  * JSON Viewer
 * Logging
 * Unit tests
 
