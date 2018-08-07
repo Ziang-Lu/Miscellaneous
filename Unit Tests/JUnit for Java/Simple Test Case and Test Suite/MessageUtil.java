@@ -1,3 +1,8 @@
+/**
+ * Simple message utility.
+ *
+ * @author Ziang Lu
+ */
 public class MessageUtil {
 
     /**
