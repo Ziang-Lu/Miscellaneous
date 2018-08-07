@@ -1,6 +1,7 @@
 [MESSAGES CONTROL]
 
 disable=
+    attribute-defined-outside-init
     len-as-condition,
     too-few-public-methods,
     too-many-locals,
