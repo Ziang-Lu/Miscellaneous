@@ -1,7 +1,23 @@
+/**
+ * 2D Point class.
+ *
+ * @author Ziang Lu
+ */
 class Point2D {
+    /**
+     * x-coordinate of the point.
+     */
     private final int x;
+    /**
+     * y-coordinate of the point.
+     */
     private final int y;
 
+    /**
+     * Constructor with parameter.
+     * @param x x-coordinate of the point
+     * @param y y-coordinate of the point
+     */
     Point2D(int x, int y) {
         this.x = x;
         this.y = y;
@@ -21,9 +37,23 @@ class Point2D {
     }
 }
 
+/**
+ * 3D point class.
+ *
+ * @author Ziang Lu
+ */
 class Point3D extends Point2D {
+    /**
+     * z-coordinate of the point.
+     */
     private final int z;
 
+    /**
+     * Constructor with parameter.
+     * @param x x-coordinate of the point
+     * @param y y-coordinate of the point
+     * @param z z-coordinate of the point
+     */
     Point3D(int x, int y, int z) {
         super(x, y);
         this.z = z;
@@ -45,6 +75,10 @@ class Point3D extends Point2D {
 
 public class InstanceofIncorrect {
 
+    /**
+     * Main driver.
+     * @param args arguments from command line
+     */
     public static void main(String[] args) {
         Point2D origin = new Point2D(0, 0);
         Point3D p1 = new Point3D(0, 0, -1);

@@ -122,6 +122,10 @@ class MySubSubClass extends MySubClass2 {}
 
 public class MixedTypeComparisonCorrectImpl {
 
+    /**
+     * Main driver.
+     * @param args arguments from command line
+     */
     public static void main(String[] args) {
         MyClass thisObj = new MyClass();
         MyClass other = null;

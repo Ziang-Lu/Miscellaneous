@@ -50,10 +50,26 @@ The subsequent discussion of **implementing `equals()` is only relevant for valu
 Check out the following common implementation
 
 ```java
+/**
+ * 2D Point class.
+ *
+ * @author Ziang Lu
+ */
 class Point2D {
+    /**
+     * x-coordinate of the point.
+     */
     private final int x;
+    /**
+     * y-coordinate of the point.
+     */
     private final int y;
 
+    /**
+     * Constructor with parameter.
+     * @param x x-coordinate of the point
+     * @param y y-coordinate of the point
+     */
     Point2D(int x, int y) {
         this.x = x;
         this.y = y;
@@ -73,9 +89,23 @@ class Point2D {
     }
 }
 
-class Point3D extends {
+/**
+ * 3D point class.
+ *
+ * @author Ziang Lu
+ */
+class Point3D extends Point2D {
+    /**
+     * z-coordinate of the point.
+     */
     private final int z;
 
+    /**
+     * Constructor with parameter.
+     * @param x x-coordinate of the point
+     * @param y y-coordinate of the point
+     * @param z z-coordinate of the point
+     */
     Point3D(int x, int y, int z) {
         super(x, y);
         this.z = z;
@@ -97,6 +127,10 @@ class Point3D extends {
 
 public class InstanceofIncorrect {
 
+    /**
+     * Main driver.
+     * @param args arguments from command line
+     */
     public static void main(String[] args) {
         Point2D origin = new Point2D(0, 0);
         Point3D p1 = new Point3D(0, 0, -1);
@@ -139,18 +173,37 @@ However, if we are designing a **final** class, which means that there will be n
 Therefore, there will be no symmetry and transitivity problem, and this kind of implementation is **perfect**.
 
 ```java
+/**
+ * Phone number class.
+ *
+ * @author Ziang Lu
+ */
 public final class PhoneNumber {
 
+    /**
+     * Area code of this phone number.
+     */
     private final short areaCode;
+    /**
+     * Exchange of this phone number.
+     */
     private final short exchange;
+    /**
+     * Extension of this phone number.
+     */
     private final short extension;
 
+    /**
+     * Constructor with parameters.
+     * @param areaCode area code of the phone number
+     * @param exchange exchange of the phone number
+     * @param extension extension of the phone number
+     */
     public PhoneNumber(short areaCode, short exchange, short extension) {
         this.areaCode = areaCode;
         this.exchange = exchange;
         this.extension = extension;
     }
-
     @Override
     public boolean equals(Object o) {
         // Reflexive
@@ -173,10 +226,26 @@ public final class PhoneNumber {
 We can also perform the type check using **`getClass()`** method as follows.
 
 ```java
+/**
+ * 2D Point class.
+ *
+ * @author Ziang Lu
+ */
 class Point2D {
+    /**
+     * x-coordinate of the point.
+     */
     private final int x;
+    /**
+     * y-coordinate of the point.
+     */
     private final int y;
 
+    /**
+     * Constructor with parameter.
+     * @param x x-coordinate of the point
+     * @param y y-coordinate of the point
+     */
     Point2D(int x, int y) {
         this.x = x;
         this.y = y;
@@ -196,9 +265,23 @@ class Point2D {
     }
 }
 
+/**
+ * 3D point class.
+ *
+ * @author Ziang Lu
+ */
 class Point3D extends Point2D {
+    /**
+     * z-coordinate of the point.
+     */
     private final int z;
 
+    /**
+     * Constructor with parameter.
+     * @param x x-coordinate of the point
+     * @param y y-coordinate of the point
+     * @param z z-coordinate of the point
+     */
     Point3D(int x, int y, int z) {
         super(x, y);
         this.z = z;
@@ -220,6 +303,10 @@ class Point3D extends Point2D {
 
 public class GetClassCorrect {
 
+    /**
+     * Main driver.
+     * @param args arguments from command line
+     */
     public static void main(String[] args) {
         Point2D origin = new Point2D(0, 0);
         Point3D p1 = new Point3D(0, 0, -1);
@@ -292,17 +379,33 @@ Use **`getClass()`** test.  =>.  Disallow mixed-type comparison, and thus is **p
     **Meaning that the class hierarchy disallows mixed-type comparison**
 
 ```java
+/**
+ * 2D Point class.
+ *
+ * @author Ziang Lu
+ */
 class Point2D {
+    /**
+     * x-coordinate of the point.
+     */
     private final int x;
+    /**
+     * y-coordinate of the point.
+     */
     private final int y;
 
+    /**
+     * Constructor with parameter.
+     * @param x x-coordinate of the point
+     * @param y y-coordinate of the point
+     */
     Point2D(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
     @Override
-    public final boolean equals(Object o) {
+    public boolean equals(Object o) {
         // Reflexive
         if (o == this) {
             return true;
@@ -315,17 +418,35 @@ class Point2D {
     }
 }
 
+/**
+ * 3D point class.
+ *
+ * @author Ziang Lu
+ */
 class Point3D extends Point2D {
+    /**
+     * z-coordinate of the point.
+     */
     private final int z;
 
+    /**
+     * Constructor with parameter.
+     * @param x x-coordinate of the point
+     * @param y y-coordinate of the point
+     * @param z z-coordinate of the point
+     */
     Point3D(int x, int y, int z) {
         super(x, y);
         this.z = z;
     }
 }
 
-public class InstanceofCorrect {
+public class InstanceofIncorrect {
 
+    /**
+     * Main driver.
+     * @param args arguments from command line
+     */
     public static void main(String[] args) {
         Point2D origin = new Point2D(0, 0);
         Point3D p1 = new Point3D(0, 0, -1);
@@ -348,12 +469,12 @@ public class InstanceofCorrect {
 
 // Comparing origin and p1 ...
 // true
-// true
+// false
 // Comparing origin and p2 ...
 // true
-// true
+// false
 // Comparing p1 and p2 ...
-// true
-// true
+// false
+// false
 ```
 

@@ -1,9 +1,29 @@
+/**
+ * Phone number class.
+ *
+ * @author Ziang Lu
+ */
 public final class PhoneNumber {
 
+    /**
+     * Area code of this phone number.
+     */
     private final short areaCode;
+    /**
+     * Exchange of this phone number.
+     */
     private final short exchange;
+    /**
+     * Extension of this phone number.
+     */
     private final short extension;
 
+    /**
+     * Constructor with parameters.
+     * @param areaCode area code of the phone number
+     * @param exchange exchange of the phone number
+     * @param extension extension of the phone number
+     */
     public PhoneNumber(short areaCode, short exchange, short extension) {
         this.areaCode = areaCode;
         this.exchange = exchange;
