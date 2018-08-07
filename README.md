@@ -7,6 +7,8 @@
 * My vim configuration
   * Check out `.vimrc`
   * Follow the instructions to create the directiories and install the corresponding plugins in the comments
+* My Sublime Text 3 preferences
+  * For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
 * My Pylint configuration
   * Check out `.pylintrc`
 * IntelliJ Plugins
