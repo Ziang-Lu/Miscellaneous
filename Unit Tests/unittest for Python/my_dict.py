@@ -1,6 +1,11 @@
 #!usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+MyDict implementation that allows getting and setting key-value pairs as
+attributes.
+"""
+
 __author__ = 'Ziang Lu'
 
 from typing import Any
@@ -11,6 +16,8 @@ class MyDict(dict):
     An dictionary class that acts the same as "dict", but also allows accessing
     values by keys as attributes.
     """
+    __slots__ = []
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 

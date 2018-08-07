@@ -1,6 +1,10 @@
 #!usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+Demo to use unittest module.
+"""
+
 __author__ = 'Ziang Lu'
 
 import unittest
@@ -12,6 +16,7 @@ class TestDict(unittest.TestCase):
     """
     A test case must inherit from unittest.TestCase
     """
+
     def setUp(self):
         """
         This method will be called to set up the testing environment for each
