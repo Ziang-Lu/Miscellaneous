@@ -4,6 +4,7 @@ disable=
     attribute-defined-outside-init,
     invalid-name,
     len-as-condition,
+    no-else-return,
     too-few-public-methods,
     too-many-branches,
     too-many-locals,
