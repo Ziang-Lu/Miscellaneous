@@ -3,4 +3,5 @@
 disable=
     len-as-condition,
     too-few-public-methods,
-    too-many-locals
+    too-many-locals,
+    useless-super-delegation
