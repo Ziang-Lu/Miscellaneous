@@ -1,7 +1,8 @@
 [MESSAGES CONTROL]
 
 disable=
-    attribute-defined-outside-init
+    attribute-defined-outside-init,
+    invalid-name,
     len-as-condition,
     too-few-public-methods,
     too-many-branches,
