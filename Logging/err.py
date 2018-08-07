@@ -1,6 +1,10 @@
 #!usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+Demo to use logging module.
+"""
+
 __author__ = 'Ziang Lu'
 
 import logging
@@ -10,6 +14,12 @@ logging.basicConfig(level=logging.INFO)
 
 
 def foo(s: str) -> float:
+    """
+    Sample function to interpret the given string as a floating-point number,
+    and return its result when divided by 10.
+    :param s: str:
+    :return: float
+    """
     n = int(s)
     logging.info('n = {}'.format(n))
     return 10 / n
