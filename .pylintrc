@@ -2,6 +2,7 @@
 
 disable=
     attribute-defined-outside-init,
+    cell-var-from-loop,
     invalid-name,
     len-as-condition,
     no-else-return,
