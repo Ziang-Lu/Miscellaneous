@@ -14,6 +14,7 @@
   * `Sidebar Enhancements`
   * `SublimeCodeIntel`
   * `SublimeLinter`
+  * `SublimeLinter-pep8`
   * `SublimeLinter-flake8`
   * `SublimeLinter-pylint`
   * `SublimeLinter-pycodestyle`
