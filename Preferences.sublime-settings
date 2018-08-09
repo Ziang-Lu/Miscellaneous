@@ -1,7 +1,7 @@
 {
 	"caret_style": "solid",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
 	"copy_with_empty_selection": false,
 	"drag_text": false,
 	"draw_minimap_border": true,
@@ -34,8 +34,7 @@
 		120
 	],
 	"scroll_speed": 3.0,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Material-Theme-Palenight.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true,
 }

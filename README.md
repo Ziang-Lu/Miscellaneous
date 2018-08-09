@@ -13,11 +13,11 @@
   * `Material Theme`
   * `Sidebar Enhancements`
   * `SublimeCodeIntel`
+  * `BracketHighlighter`
   * `SublimeLinter`
   * `SublimeLinter-pep8`
   * `SublimeLinter-flake8`
   * `SublimeLinter-pylint`
-  * `SublimeLinter-pycodestyle`
   * `DocBlockr`
   * `GitGutter`
 * My Pylint configuration
