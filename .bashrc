@@ -1,3 +1,5 @@
+# This script will run when a non-login shell is spawned.
+
 # TODO: understand shell script
 
 # Setting prompt text & color
