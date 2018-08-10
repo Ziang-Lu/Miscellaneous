@@ -3,7 +3,8 @@
 # TODO: understand shell script
 
 # Setting prompt text & color
-export PS1="\e[0;32m [Captain \W] \$ \[\e[0m\]"
+PS1="\e[0;32m \n [\u @ \h in \W]\n \$ \[\e[0m\]"
+export PS1;
 
 alias ll="ls -al"
 alias hi="history"
