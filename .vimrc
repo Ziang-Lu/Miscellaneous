@@ -1,10 +1,10 @@
 " Configuration file for vim
-set modelines=0		" CVE-2007-2438
+set modelines=0  " CVE-2007-2438
 
 " Normally we use vim-extensions. If you want true vi-compatibility remove
 " change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=2		" More powerful backspacing
+set nocompatible  " Use Vim defaults instead of 100% vi compatibility
+set backspace=2  " More powerful backspacing
 
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
@@ -141,3 +141,4 @@ let g:indent_guides_guide_size = 1
 " (Better display JSON files)
 " cd ~/.vim/bundle
 " git clone git@github.com:elzr/vim-json.git
+
