@@ -36,3 +36,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Settings for SportDex Cocoapods
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+echo 'Hello, Captain!'
