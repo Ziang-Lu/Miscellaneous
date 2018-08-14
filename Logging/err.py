@@ -21,7 +21,7 @@ def foo(s: str) -> float:
     :return: float
     """
     n = int(s)
-    logging.info('n = {}'.format(n))
+    logging.info(f'n = {n}')
     return 10 / n
 
 
