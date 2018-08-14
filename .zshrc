@@ -1,8 +1,9 @@
-alias ll="ls -al"
-alias hi="history"
-alias vi="vim"
-alias sed="gsed"
-alias shuf="gshuf"
+alias ll='ls -al'
+alias hi='history'
+alias vi='vim'
+alias sed='gsed'
+alias shuf='gshuf'
+alias now='date +"%T"'
 
 # Setting for Node Version Manager (NVM)
 export NVM_DIR="$HOME/.nvm"
