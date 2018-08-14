@@ -1,8 +1,10 @@
+alias ..='cd ..'
 alias ll='ls -al'
 alias hi='history'
 alias vi='vim'
 alias sed='gsed'
 alias shuf='gshuf'
+alias curl='curl -L'
 alias now='date +"%T"'
 
 # Setting for Node Version Manager (NVM)

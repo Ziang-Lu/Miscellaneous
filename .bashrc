@@ -6,11 +6,13 @@
 PS1="\e[0;32m \n [\u @ \h in \W]\n \$ \[\e[0m\]"
 export PS1;
 
+alias ..='cd ..'
 alias ll='ls -al'
 alias hi='history'
 alias vi='vim'
 alias sed='gsed'
 alias shuf='gshuf'
+alias curl='curl -L'
 alias now='date +"%T"'
 
 # Setting listing colors
