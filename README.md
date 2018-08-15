@@ -1,5 +1,7 @@
 # Miscellaneous Topics
 
+This repo contains a variety of topics, including:
+
 * My bash profile file
 
 * For oh-my-zsh installation and configuration, see
@@ -46,3 +48,8 @@
 
 * Unit tests
 
+<br>
+
+## License
+
+ This repo is distributed under the MIT license.
