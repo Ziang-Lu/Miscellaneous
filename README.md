@@ -52,4 +52,4 @@ This repo contains a variety of topics, including:
 
 ## License
 
- This repo is distributed under the MIT license.
+ This repo is distributed under the <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/LICENSE">MIT license</a>.
