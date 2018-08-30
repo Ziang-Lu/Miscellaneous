@@ -5,7 +5,7 @@
 argparse module simple example.
 """
 
-# __author__ = 'Ziang Lu'
+__author__ = 'Ziang Lu'
 
 import argparse
 
@@ -17,14 +17,16 @@ def fib(n: int) -> int:
     :return: int
     """
     a, b = 0, 1
-    for i in range(n):
+    for _ in range(n):
         a, b = b, a + b
     return a
 
 
 def main():
     # Create an ArgumentParser object
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description='calculates the num-th Fibonacci number'
+    )
 
     # POSITIONAL argument
     parser.add_argument(
@@ -43,10 +45,10 @@ def main():
     group.add_argument('-v', '--verbose', help='Output to console.',
                        action='store_true')
     group.add_argument('-q', '--quiet', help='Output to group',
-                       action='store_false')
+                       action='store_true')
     # action='store_true' turns the optional argument into a flag, rather than
-    # requiring some value, which means that if -o or --output is specified, set
-    # it to True, and False otherwise.
+    # requiring some value, which means that if -o or --output is specified,
+    # set it to True, and False otherwise.
 
     # nargs ???
 
