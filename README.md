@@ -23,7 +23,7 @@ This repo contains a variety of topics, including:
   * `SublimeLinter`
   * `SublimeLinter-pep8` (for Python only)
   * `SublimeLinter-flake8` (for Python only)
-  * `SublimeLinter-pylint`
+  * `SublimeLinter-pylint` (for Python only)
   * `DocBlockr`
   * `GitGutter`
 
@@ -34,6 +34,7 @@ This repo contains a variety of topics, including:
   ```
 
 * My Pylint configuration
+
   * Check out `.pylintrc`
 
 * IntelliJ Plugins
@@ -43,6 +44,10 @@ This repo contains a variety of topics, including:
   * Checkstyle   *(IntelliJ IDEA & Android Studio)*
   * Save Actions
   * JSON Viewer
+
+* Java class equality design
+
+* Python `argparse` module example
 
 * Logging
 
