@@ -2,6 +2,8 @@
 
 This repo contains a variety of topics, including:
 
+## Development Environment Setup
+
 * My bash profile file
 
 * For oh-my-zsh installation and configuration, see
@@ -45,12 +47,21 @@ This repo contains a variety of topics, including:
   * Save Actions
   * JSON Viewer
 
+<br>
+
+## Miscellaneous Topics in Coding
+
+### Best Coding Practice
+
 * Java class equality design
+
+### Python modules
 
 * Python `argparse` module example
 
-* Logging
+### Development-related
 
+* Logging
 * Unit tests
 
 <br>
