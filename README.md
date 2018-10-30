@@ -4,17 +4,26 @@ This repo contains a variety of topics, including:
 
 ## Development Environment Setup
 
-* My bash profile file
+### Bash
 
+* Bash profile file
 * For oh-my-zsh installation and configuration, see
 
   * https://www.zhihu.com/question/20873070/answer/410248435
 
-* My vim configuration
+### Python Linter Configuration
+
+* Pylint configuration
+  * Check out `.pylintrc`
+
+### Text Editor
+
+* vim configuration
+
   * Check out `.vimrc`
   * Follow the instructions to create the directiories and install the corresponding plugins in the comments
 
-* My Sublime Text 3 preferences
+* Sublime Text 3 preferences
   * For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
   * `Package control`
   * `Material Theme`
@@ -35,9 +44,7 @@ This repo contains a variety of topics, including:
   ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
   ```
 
-* My Pylint configuration
-
-  * Check out `.pylintrc`
+### IDE
 
 * IntelliJ Plugins
   * CodeGlance
