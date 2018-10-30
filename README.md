@@ -11,48 +11,65 @@ This repo contains a variety of topics, including:
 
   * https://www.zhihu.com/question/20873070/answer/410248435
 
+<br>
+
 ### Python Linter Configuration
 
 * Pylint configuration
   * Check out `.pylintrc`
 
+<br>
+
 ### Text Editor
 
-* vim configuration
+#### - Vim (for all) Configuration
 
-  * Check out `.vimrc`
-  * Follow the instructions to create the directiories and install the corresponding plugins in the comments
+* Check out `.vimrc`
+* Follow the instructions to create the directiories and install the corresponding plugins in the comments
 
-* Sublime Text 3 preferences
-  * For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
-  * `Package control`
-  * `Material Theme`
-  * `Sidebar Enhancements`
-  * `SublimeCodeIntel`
-  * `Anaconda` (for Python only)
-  * `BracketHighlighter`
-  * `SublimeLinter`
-  * `SublimeLinter-pep8` (for Python only)
-  * `SublimeLinter-flake8` (for Python only)
-  * `SublimeLinter-pylint` (for Python only)
-  * `DocBlockr`
-  * `GitGutter`
+#### - Sublime Text 3 (for all) Preferences & Plugins
 
-  Note that in order to use `subl` command, do the following to create a soft link to that command line tool:
+* For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
+* `Package control`
+* `Material Theme`
+* `Sidebar Enhancements`
+* `SublimeCodeIntel`
+* `Anaconda` (for Python only)
+* `BracketHighlighter`
+* `SublimeLinter`
+* `SublimeLinter-pep8` (for Python only)
+* `SublimeLinter-flake8` (for Python only)
+* `SublimeLinter-pylint` (for Python only)
+* `DocBlockr`
+* `GitGutter`
 
-  ```bash
-  ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-  ```
+Note that in order to use `subl` command, do the following to create a soft link to that command line tool:
+
+```bash
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```
+
+#### - Visual Studio Code (for JavaScript & HTML) Extensions
+
+* `Material Theme`
+* `TODO Highlight`
+* `JavaScript (ES6) code snippet`
+* `Auto Close Tag`
+* `Auto Rename Tag`
+* `Live Server`
+
+<br>
 
 ### IDE
 
-* IntelliJ Plugins
-  * CodeGlance
-  * Presentation Assistant
-  * IdeaVim
-  * Checkstyle   *(IntelliJ IDEA & Android Studio)*
-  * Save Actions
-  * JSON Viewer
+#### - IntelliJ Plugins
+
+* CodeGlance
+* Presentation Assistant
+* IdeaVim
+* Checkstyle   *(IntelliJ IDEA & Android Studio)*
+* Save Actions
+* JSON Viewer
 
 <br>
 
@@ -62,11 +79,11 @@ This repo contains a variety of topics, including:
 
 * Java class equality design
 
-### Python modules
+### Python Modules
 
 * Python `argparse` module example
 
-### Development-related
+### Development-Related
 
 * Logging
 * Unit tests
