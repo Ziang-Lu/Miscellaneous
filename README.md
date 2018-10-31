@@ -54,6 +54,7 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 * `Material Theme`
 * `TODO Highlight`
 * `JavaScript (ES6) code snippet`
+* `HTML CSS Support`
 * `Auto Close Tag`
 * `Auto Rename Tag`
 * `Live Server`
