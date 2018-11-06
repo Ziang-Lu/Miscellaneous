@@ -25,7 +25,7 @@ def fib(n: int) -> int:
 def main():
     # Create an ArgumentParser object
     parser = argparse.ArgumentParser(
-        description='calculates the num-th Fibonacci number'
+        description='Calculates the num-th Fibonacci number'
     )
 
     # POSITIONAL argument
