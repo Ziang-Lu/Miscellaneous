@@ -52,7 +52,7 @@ def main():
 
     # nargs ???
 
-    # Parse the arguments, result in a Namespace object
+    # Parse the arguments, resulting in a Namespace object
     args = parser.parse_args()
 
     # Calculate the result

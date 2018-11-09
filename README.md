@@ -68,7 +68,7 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 * CodeGlance
 * Presentation Assistant
 * IdeaVim
-* Checkstyle   *(IntelliJ IDEA & Android Studio)*
+* Checkstyle   *(IntelliJ IDEA)*
 * Save Actions
 * JSON Viewer
 
