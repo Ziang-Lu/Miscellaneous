@@ -7,10 +7,26 @@ alias shuf='gshuf'
 alias curl='curl -L'
 alias now='date +"%T"'
 
-# Setting for Node Version Manager (NVM)
+# Setting for coreutils
+export PATH="usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# Setting for Python 3 encoding
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Setting for NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "/usr/local/opt/nvm/nvm.sh"
+
+# Setting for Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+# Setting for SQLite
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="-I/usr/local/opt/sqlite/incldue"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Ziang_Lu/.oh-my-zsh"
