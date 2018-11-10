@@ -63,6 +63,12 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 ### IDE
 
+#### IntelliJ Idea Settings
+
+Check out the .jar file
+
+#### PyCharm Settings
+
 #### - IntelliJ Plugins
 
 * CodeGlance
