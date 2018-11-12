@@ -7,6 +7,13 @@ alias shuf='gshuf'
 alias curl='curl -L'
 alias now='date +"%T"'
 
+# Setting for less command with these default options
+LESS="-Nis"
+# Constantly display line numbers
+# Cause search to ignore case
+# Squeeze consecutive blank lines into one single blank line
+export LESS
+
 # Setting for coreutils
 export PATH="usr/local/opt/coreutils/libexec/gnubin:$PATH"
 

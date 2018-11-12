@@ -17,6 +17,13 @@ alias now='date +"%T"'
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+# Setting for less command with these default options
+LESS="-Nis"
+# Constantly display line numbers
+# Cause search to ignore case
+# Squeeze consecutive blank lines into one single blank line
+export LESS
+
 # Setting for coreutils
 export PATH="usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
