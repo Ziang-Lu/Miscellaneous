@@ -8,9 +8,10 @@ alias curl='curl -L'
 alias now='date +"%T"'
 
 # Setting for less command with these default options
-LESS="-Nis"
-# Constantly display line numbers
+LESS="-iNRs"
 # Cause search to ignore case
+# Constantly display line numbers
+# Display "raw" control characters
 # Squeeze consecutive blank lines into one single blank line
 export LESS
 

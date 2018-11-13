@@ -18,9 +18,10 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Setting for less command with these default options
-LESS="-Nis"
-# Constantly display line numbers
+LESS="-iNs"
 # Cause search to ignore case
+# Constantly display line numbers
+# Display "raw" control characters
 # Squeeze consecutive blank lines into one single blank line
 export LESS
 

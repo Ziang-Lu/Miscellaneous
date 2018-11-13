@@ -37,7 +37,7 @@ This repo contains a variety of topics, including:
 * `Anaconda` (for Python only)
 * `BracketHighlighter`
 * `SublimeLinter`
-* `SublimeLinter-pep8` (for Python only)
+* `isort` (for Python only)
 * `SublimeLinter-flake8` (for Python only)
 * `SublimeLinter-pylint` (for Python only)
 * `DocBlockr`
