@@ -71,22 +71,33 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 ### IDE
 
-#### [Java]   IntelliJ Idea Settings
+#### [Java]   IntelliJ IDEA Settings
 
 Check out the .jar file
 
 #### [Python]   PyCharm Settings
 
-* For adding `Isort`, `Pylint` and `Flake8` as an external tools, follow similar procedures as https://github.com/timothycrosley/isort/wiki/isort-Plugins
+* For adding `Isort` and `Flake8` as an external tools, follow similar procedures as https://github.com/timothycrosley/isort/wiki/isort-Plugins
 
 #### [All]   JetBrains Plugins
 
-* CodeGlance
-* Presentation Assistant
-* IdeaVim
-* Checkstyle   *(IntelliJ IDEA)*
-* Save Actions
-* JSON Viewer
+* `CodeGlance`
+
+* `Presentation Assistant`
+
+* `IdeaVim`
+
+  * `Checkstyle`   *(IntelliJ IDEA)*
+
+  * `Pylint`   *(PyCharm)*
+
+    * In Preference -> Other Settings -> Pylint, set
+
+      Path to Pylint executable: `/usr/local/bin/pylint`
+
+      Path to pylintrc: `/Users/Ziang_Lu/.pylintrc`
+
+* `JSON Viewer`
 
 <br>
 
