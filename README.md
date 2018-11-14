@@ -26,6 +26,8 @@ This repo contains a variety of topics, including:
     * `McCabe` (code complexity checker)
   * Check out `flake8` and put it into `~/.config`
 
+For Python auto-formatters like `Yapf`, check out https://github.com/google/yapf; but in my text editor and IDEs, I didn't configure any Python auto-formatter.
+
 <br>
 
 ### Text Editor
@@ -87,15 +89,15 @@ Check out the .jar file
 
 * `IdeaVim`
 
-  * `Checkstyle`   *(IntelliJ IDEA)*
+* `Checkstyle`   *(IntelliJ IDEA)*
 
-  * `Pylint`   *(PyCharm)*
+* `Pylint`   *(PyCharm)*
 
-    * In Preference -> Other Settings -> Pylint, set
+  * In Preference -> Other Settings -> Pylint, set
 
-      Path to Pylint executable: `/usr/local/bin/pylint`
+    Path to Pylint executable: `/usr/local/bin/pylint`
 
-      Path to pylintrc: `/Users/Ziang_Lu/.pylintrc`
+    Path to pylintrc: `/Users/Ziang_Lu/.pylintrc`
 
 * `JSON Viewer`
 
