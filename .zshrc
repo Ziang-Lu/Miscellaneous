@@ -1,11 +1,12 @@
 alias ..='cd ..'
-alias ll='ls -al'
+alias curl='curl -L'
+alias flake8='flake8 --max-line-length=80 --max-complexity=10'
 alias hi='history'
-alias vi='vim'
+alias ll='ls -al'
+alias now='date +"%T"'
 alias sed='gsed'
 alias shuf='gshuf'
-alias curl='curl -L'
-alias now='date +"%T"'
+alias vi='vim'
 
 # Setting for less command with these default options
 LESS="-iNRs"

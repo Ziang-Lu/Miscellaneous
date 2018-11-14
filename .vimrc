@@ -136,6 +136,21 @@ set ts=4 sw=4 et
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+autocmd BufWritePost *.py call Flake8()
+
+" Settings for vim-isort
+" cd ~/.vim/bundle
+" git clone git@github.com:fisadev/vim-isort.git
+" To use it, just call the :Isort command
+" Or, just call :%!isort - command
+
+" Setting for vim-flake8
+" cd ~/.vim/bundle
+" git clone git@github.com:nvie/vim-flake8.git
+let g:flake8_quickfix_location="bottomright"
+let g:flake8_show_in_file=1
+let g:flake8_show_in_gutter=1
+" To use it, just press F8 to call it
 
 " Settings for vim-json
 " (Better display JSON files)

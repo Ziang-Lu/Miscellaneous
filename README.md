@@ -15,31 +15,39 @@ This repo contains a variety of topics, including:
 
 ### Python Linter Configuration
 
-* Pylint configuration
+* `Isort` configuration
+  * Check out `.isort.cfg`
+* `Pylint` configuration
   * Check out `.pylintrc`
+* `Flake8`
+  * `Flake8` is a wrapper tool for three tools:
+    * `PyFlakes` (static syntax checker)
+    * `Pep8` (style checker)
+    * `McCabe` (code complexity checker)
+  * Check out `flake8` and put it into `~/.config`
 
 <br>
 
 ### Text Editor
 
-#### - Vim (for all) Configuration
+#### - Vim   (for all)   Configuration
 
 * Check out `.vimrc`
 * Follow the instructions to create the directiories and install the corresponding plugins in the comments
 
-#### - Sublime Text 3 (for all) Preferences & Plugins
+#### - Sublime Text 3   (for all)   Preferences & Plugins
 
 * For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
 * `Package control`
 * `Material Theme`
 * `Sidebar Enhancements`
 * `SublimeCodeIntel`
-* `Anaconda` (for Python only)
+* `Anaconda`   (for Python only)
 * `BracketHighlighter`
 * `SublimeLinter`
-* `isort` (for Python only)
-* `SublimeLinter-flake8` (for Python only)
-* `SublimeLinter-pylint` (for Python only)
+* `isort`   (for Python only)
+* `SublimeLinter-pylint`   (for Python only)
+* `SublimeLinter-flake8`   (for Python only)
 * `DocBlockr`
 * `GitGutter`
 
@@ -49,7 +57,7 @@ Note that in order to use `subl` command, do the following to create a soft link
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
-#### - Visual Studio Code (for JavaScript & HTML) Extensions
+#### - Visual Studio Code   (for JavaScript & HTML)   Extensions
 
 * `Material Theme`
 * `TODO Highlight`
@@ -63,13 +71,15 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 ### IDE
 
-#### IntelliJ Idea Settings
+#### [Java]   IntelliJ Idea Settings
 
 Check out the .jar file
 
-#### PyCharm Settings
+#### [Python]   PyCharm Settings
 
-#### - IntelliJ Plugins
+* For adding `Isort`, `Pylint` and `Flake8` as an external tools, follow similar procedures as https://github.com/timothycrosley/isort/wiki/isort-Plugins
+
+#### [All]   JetBrains Plugins
 
 * CodeGlance
 * Presentation Assistant
