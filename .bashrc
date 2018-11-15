@@ -6,7 +6,6 @@ export PS1;
 
 alias ..='cd ..'
 alias curl='curl -L'
-alias flake8='flake8 --max-line-length=80 --max-complexity=10'
 alias hi='history'
 alias ll='ls -al'
 alias now='date +"%T"'
