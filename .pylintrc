@@ -1,5 +1,11 @@
+[FORMAT]
+
+# Allow the body of an if to be on the same line if there is no else
+single-line-if-stmt=no
+
 [MESSAGES CONTROL]
 
+# Disable the messages or warnings with the given id(s)
 disable=
     attribute-defined-outside-init,
     cell-var-from-loop,
@@ -11,3 +17,8 @@ disable=
     too-many-locals,
     useless-object-inheritance,
     useless-super-delegation
+
+[BASIC]
+
+# Include a hint for the correct naming format with invalid-name
+include-naming-hint=no
