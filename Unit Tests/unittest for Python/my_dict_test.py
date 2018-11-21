@@ -52,7 +52,7 @@ class TestDict(unittest.TestCase):
     def test_keyerror(self) -> None:
         d = MyDict()
         with self.assertRaises(KeyError):
-            val = d['key']
+            d['key']
 
     def test_attr(self) -> None:
         d = MyDict()
@@ -63,7 +63,7 @@ class TestDict(unittest.TestCase):
     def test_attrerror(self) -> None:
         d = MyDict()
         with self.assertRaises(AttributeError):
-            val = d.key
+            d.key
 
 
 if __name__ == '__main__':
