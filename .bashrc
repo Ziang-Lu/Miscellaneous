@@ -26,7 +26,13 @@ LESS="-iNs"
 export LESS
 
 # Setting for coreutils
-export PATH="usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# Setting for openssl
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
 # Setting for Python 3 encoding
 export LC_ALL=en_US.UTF-8
