@@ -1,10 +1,21 @@
 import junit.framework.TestCase;
 import org.junit.Test;
 
+/**
+ * Test case that should pass.
+ *
+ * @author Ziang Lu
+ */
 public class TestCasePositive extends TestCase {
 
-    private String msg = "Robert";
-    MessageUtil msgUtil = new MessageUtil(msg);
+    /**
+     * Message string for this test case.
+     */
+    private final String msg = "Robert";
+    /**
+     * Message utility for this test case.
+     */
+    private MessageUtil msgUtil = new MessageUtil(msg);
 
     @Test
     public void testPrintMsg() {

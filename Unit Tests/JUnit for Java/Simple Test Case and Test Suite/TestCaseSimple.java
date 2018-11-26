@@ -3,9 +3,14 @@ import org.junit.Test;
 
 /*
  * A test case must inherit junit.framework.TestCase
+ *
+ * @author Ziang Lu
  */
 public class TestCaseSimple extends TestCase {
 
+    /**
+     * Two values used for testing.
+     */
     private int val1, val2;
 
     /*
