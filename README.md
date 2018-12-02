@@ -105,9 +105,9 @@ Check out the .jar file
 
 ## Miscellaneous Topics in Coding
 
-### Best Coding Practice
+### Java-Related Knowledges
 
-* Java class equality design
+* Java reference types
 
 ### Python Modules
 
