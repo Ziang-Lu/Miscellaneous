@@ -105,7 +105,7 @@ Check out the .jar file
 
 ## MySQL Server Setup
 
-Put the `mysql.cnf` file under `/etc` folder
+Put the `my.cnf` file under `/etc` folder
 
 <br>
 
