@@ -113,11 +113,11 @@ Put the `my.cnf` file under `/etc` folder
 
 ### Java-Related Knowledges
 
-* Java reference types
+* <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Java-Related/Java%20Reference%20Types.md">Java reference types</a>
 
 ### Python Modules
 
-* Python `argparse` module example
+* <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Python%20Standard%20Modules%20Demo/argparse_demo.py">Python `argparse` module example</a>
 
 ### Development-Related
 
