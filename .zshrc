@@ -42,6 +42,9 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 export CPPFLAGS="-I/usr/local/opt/sqlite/incldue"
 
+# Setting for MySQL
+export PATH="/usr/local/mysql/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Ziang_Lu/.oh-my-zsh"
 
