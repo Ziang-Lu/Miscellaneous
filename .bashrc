@@ -52,4 +52,7 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 export CPPFLAGS="-I/usr/local/opt/sqlite/incldue"
 
+# Setting for MySQL
+export PATH="/usr/local/mysql/bin:$PATH"
+
 echo 'Hello, Captain!'
