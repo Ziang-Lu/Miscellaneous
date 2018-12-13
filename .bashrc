@@ -55,4 +55,7 @@ export CPPFLAGS="-I/usr/local/opt/sqlite/incldue"
 # Setting for MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
 
+# Setting for Kaggle
+export PATH="/Users/Ziang_Lu/Library/Python/3.7/bin:$PATH"
+
 echo 'Hello, Captain!'

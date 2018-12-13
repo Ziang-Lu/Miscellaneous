@@ -45,13 +45,16 @@ export CPPFLAGS="-I/usr/local/opt/sqlite/incldue"
 # Setting for MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
 
+# Setting for Kaggle
+export PATH="/Users/Ziang_Lu/Library/Python/3.7/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Ziang_Lu/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="pygmalion"
+ZSH_THEME='pygmalion'
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
