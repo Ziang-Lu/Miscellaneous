@@ -55,6 +55,19 @@ export CPPFLAGS="-I/usr/local/opt/sqlite/incldue"
 # Setting for MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
 
+# Setting for icu4c
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
+# Setting for PostgreSQL
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/postgresql@9.6/lib"
+export CPPFLAGS="-I/usr/local/opt/postgresql@9.6/include"
+export PKG_CONFIG_PATH="/usr/local/opt/postgresql@9.6/lib/pkgconfig"
+
 # Setting for Kaggle
 export PATH="/Users/Ziang_Lu/Library/Python/3.7/bin:$PATH"
 

@@ -159,3 +159,8 @@ autocmd BufWritePost *.py call Flake8()
 " cd ~/.vim/bundle
 " git clone git@github.com:elzr/vim-json.git
 
+" Setting for vim-markdown
+" cd ~/.vim/bundle
+" git clone git@github.com:plasticboy/vim-markdown.git
+let g:vim_markdown_math=1
+let g:vim_markdown_json_frontmatter=1
