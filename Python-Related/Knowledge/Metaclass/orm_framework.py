@@ -74,24 +74,26 @@ class ModelMetaclass(type):
         # Constructor
         # This method is called when a new type (model / table) is created.
 
-        if name == 'Model':  # Creating the base type for all the models / tables (Model)
+        # Creating the base type for all the models / tables (Model)
+        if name == 'Model':
             # No need to define the columns
             # Continue to call the super constructor
             return type.__new__(cls, name, bases, attrs)
 
         # Creating a new type (model / table)
         print(f'Creating model / table: {name}')
-        # Define the columns
+        # Define the columns of the model / table, and save it to an dictionary
+        # Then we can remove the class column attributes from the class, to
+        # avoid the later bound instance attributes (record values) overriding
+        # the corresponding same-name class column attributes
         columns = {}
         for k, v in attrs.items():
             if isinstance(v, Column):
                 print(f'Defining column: {k} -> {v}')
                 columns[k] = v
-        # Remove the class attribute from the class, since the same-name
-        # instance attribute will override the corresponding class attribute
+        attrs['__columns__'] = columns
         for k in columns:
             attrs.pop(k)
-        attrs['__columns__'] = columns
         # Continue to call the super constructor
         return type.__new__(cls, name, bases, attrs)
 
@@ -101,13 +103,13 @@ class Model(dict, metaclass=ModelMetaclass):
     When the base type for all the models / tables "Model" is created, Python
     interpreter will call ModelMetaclass.__new__() to create the base type
     "Model".
+
+    This class inherits "dict" type because when creating new objects, we want
+    to be able to use keyword arguments.
     """
 
     def __init__(self, **kwargs):
-        """
-        Constructor with parameter.
-        :param kwargs: dict
-        """
+        # Pass the keyword arguments to "dict" constructor
         super().__init__(**kwargs)
 
     def __getattr__(self, item):
@@ -118,6 +120,7 @@ class Model(dict, metaclass=ModelMetaclass):
             raise AttributeError(f"'Model' type has no attribute '{item}'")
 
     def __setattr__(self, key, value):
+        # This method is defined to make "Model" dict work like a class.
         self[key] = value
 
     def save(self) -> bool:
@@ -127,7 +130,7 @@ class Model(dict, metaclass=ModelMetaclass):
         """
         columns = []
         values = []
-        for attr_name, column in self.__columns__.items():
+        for attr_name, column in self.__class__.__columns__.items():
             columns.append(column.name)
             values.append(getattr(self, attr_name, None))
 
@@ -160,6 +163,8 @@ class User(Model):
     name = TextColumn(name='name')
     email = TextColumn(name='email')
     password = TextColumn(name='password')
+    # After the type (model / table) "User" is created, these class attributes
+    # will be removed, as in ModelMetaclass.__new__() method.
 
 
 user = User(id=12345, name='Michael', email='user@gmail.com', password='abc')
