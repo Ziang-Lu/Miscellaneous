@@ -68,6 +68,9 @@ export LDFLAGS="-L/usr/local/opt/postgresql@9.6/lib"
 export CPPFLAGS="-I/usr/local/opt/postgresql@9.6/include"
 export PKG_CONFIG_PATH="/usr/local/opt/postgresql@9.6/lib/pkgconfig"
 
+# Setting for Redis
+export PATH="/usr/local/redis/bin:$PATH"
+
 # Setting for Kaggle
 export PATH="/Users/Ziang_Lu/Library/Python/3.7/bin:$PATH"
 

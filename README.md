@@ -115,9 +115,12 @@ Put the `my.cnf` file under `/etc` folder
 
 * <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Java-Related/Java%20Reference%20Types.md">Java reference types</a>
 
-### Python Modules
+### Python-Related
 
-* <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Python%20Standard%20Modules%20Demo/argparse_demo.py">Python `argparse` module example</a>
+* Knowledge
+  * Metaclass
+* Python Standard Library
+  * <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Python%20Standard%20Modules%20Demo/argparse_demo.py">Python `argparse` module example</a>
 
 ### Development-Related
 
