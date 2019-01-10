@@ -126,6 +126,7 @@ Put the `my.cnf` file under `/etc` folder
 
 * Logging
 * Unit tests
+* Profiling
 
 <br>
 
