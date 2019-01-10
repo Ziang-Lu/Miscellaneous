@@ -28,15 +28,19 @@ def profile(func: Callable) -> Callable:
         pr.disable()
 
         str_buf = io.StringIO()  # In-memory stream for text I/O
-        stats = Stats(pr, stream=str_buf).sort_stats(SortKey.CUMULATIVE)  # Sort the entries in the profile data by cumulative times
+        stats = Stats(pr, stream=str_buf).sort_stats(SortKey.CUMULATIVE)  # Sort the entries by cumulative times
         stats.strip_dirs()
         stats.print_stats()  # Output the formatted profile data to "str_buf" in-memory text I/O stream
         print(str_buf.getvalue())
         # Actually, we don't need to use "str_buf" and simply do stream=stdout,
         # which will output the formatted profile data to standard output.
 
-        # Also output the formatted profile data to "result_stats" file
-        stats.dump_stats('result_stats')
+        # Note that we can also use Stats class as a statistics browser for the
+        # dumped profile data (.proj files)
+        # => We simply need to pass a filename to the constructor.
+
+        # Also output the formatted profile data to "result_stats.prof" file
+        stats.dump_stats('result_stats.prof')
         return retval
 
     return inner

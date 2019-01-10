@@ -42,4 +42,6 @@ def main():
 
 
 if __name__ == '__main__':
-    cProfile.run('main()', filename='result_stats')  # Output the profile data to "result_stats" file
+    # Sort the entries by cumulative time
+    # Output the profile data to "result_stats.prof" file
+    cProfile.run('main()', sort=2, filename='result_stats.prof')
