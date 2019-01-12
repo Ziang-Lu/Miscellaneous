@@ -95,3 +95,9 @@ Assume that we got a profile file called `result_stats.prof`, we can visualize i
 > kernprof -l -o result_stats.lprof -v line_profiler_grid2d.py
 ```
 
+The above command will also print the profiling statistics to to the terminal. However, if later we want to check out the profiling statistics stored in `result_stats.lprof`, we can do
+
+```bash
+> python -m line_profiler result_stats.lprof
+```
+
