@@ -71,6 +71,8 @@ Assume that we got a profile file called `result_stats.prof`, we can visualize i
 
 ### 2. `line_profiler` Module
 
+*Note: Currently Python 3.7 is not well supported by `line_profiler`, so we'll just do Python 2.7 version.*
+
 -> Profile the execution <u>line by line</u>
 
 **Installation**
