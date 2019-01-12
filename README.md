@@ -124,9 +124,10 @@ Put the `my.cnf` file under `/etc` folder
 
 ### Development-Related
 
-* Logging
-* Unit tests
-* Profiling
+|        | Logging                                                      | Unit tests                                                   | Profiling                                                    |
+| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Java   |                                                              | <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Unit%20Tests/JUnit%20for%20Java">`JUnit`</a> |                                                              |
+| Python | <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Logging/err.py">`logging`</a> | <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Unit%20Tests/unittest%20for%20Python">`unittest`</a> | <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Profiling/Python/Python%20Profiling.md">Overview</a><br>`time`<br>`timeit`<br>`cProfile`  (+ `snakeviz`)<br>`line_profiler` |
 
 <br>
 

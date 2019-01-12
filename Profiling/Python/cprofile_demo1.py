@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-cProfile demo 1 using cProfile.run() function.
+cProfile module demo 1 using cProfile.run() function.
 """
 
 __author__ = 'Ziang Lu'
@@ -44,4 +44,4 @@ def main():
 if __name__ == '__main__':
     # Sort the entries by cumulative time
     # Output the profile data to "result_stats.prof" file
-    cProfile.run('main()', sort=2, filename='result_stats.prof')
+    cProfile.run('main()', sort=2, filename='result_stats1.prof')

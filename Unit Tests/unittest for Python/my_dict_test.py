@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Demo to use unittest module.
+unittest module module.
 """
 
 __author__ = 'Ziang Lu'

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-argparse module simple example.
+argparse module demo.
 """
 
 __author__ = 'Ziang Lu'

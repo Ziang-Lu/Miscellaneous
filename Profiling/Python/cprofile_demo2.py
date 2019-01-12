@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-cProfile demo 2 using cProfile.Profile and pstats.Stats classes to gain more
-precise control.
+cProfile module demo 2 using cProfile.Profile and pstats.Stats classes to gain
+more precise control.
 """
 
 __author__ = 'Ziang Lu'
@@ -40,7 +40,7 @@ def profile(func: Callable) -> Callable:
         # => We simply need to pass a filename to the constructor.
 
         # Also output the formatted profile data to "result_stats.prof" file
-        stats.dump_stats('result_stats.prof')
+        stats.dump_stats('result_stats2.prof')
         return retval
 
     return inner
