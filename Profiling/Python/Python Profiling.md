@@ -28,12 +28,6 @@ Check out `timeit_for_loop.py`
 
 -> Profile <u>function calls</u>
 
-***
-
-*(Enabling a profiler will add significant overhead to the program execution!!!)*
-
-***
-
 #### Python Programming Interface (as Module)
 
 * Use `cProfile.run()` function
@@ -75,13 +69,13 @@ Assume that we got a profile file called `result_stats.prof`, we can visualize i
 
 -> Profile the execution <u>line by line</u>
 
-**Installation**
+#### Installation
 
 ```bash
 > pip install line_profiler
 ```
 
-**Usage**
+#### Usage
 
 1. As decorator
 
@@ -92,12 +86,34 @@ Assume that we got a profile file called `result_stats.prof`, we can visualize i
    Use `with profile:` to profile a single code section
 
 ```bash
-> kernprof -l -o result_stats.lprof -v line_profiler_grid2d.py
+> kernprof -l -o line_profiler_demo.lprof -v line_profiler_demo.py
 ```
 
 The above command will also print the profiling statistics to to the terminal. However, if later we want to check out the profiling statistics stored in `result_stats.lprof`, we can do
 
 ```bash
-> python -m line_profiler result_stats.lprof
+> python -m line_profiler line_profiler_demo.lprof
 ```
+
+<br>
+
+### 3. `yappi` Module
+
+-> Profile <u>function calls</u> and <u>thread execution statistics</u>
+
+#### Installation
+
+```bash
+> pip3 install yappi
+```
+
+#### Usage
+
+1. Direct usage
+
+   Check out `yappi_demo1.py`
+
+2. As context manager
+
+   Check out `yappi_demo2.py`
 
