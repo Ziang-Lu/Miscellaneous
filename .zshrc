@@ -1,12 +1,3 @@
-alias ..='cd ..'
-alias curl='curl -L'
-alias hi='history'
-alias ll='ls -al'
-alias now='date +"%T"'
-alias sed='gsed'
-alias shuf='gshuf'
-alias vi='vim'
-
 # Setting for less command with these default options
 LESS="-iNRs"
 # Cause search to ignore case
@@ -166,5 +157,14 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ..='cd ..'
+alias curl='curl -L'
+alias hi='history'
+alias ls='ls --color=auto'
+alias ll='ls -al --color=auto'
+alias now='date +"%T"'
+alias sed='gsed'
+alias shuf='gshuf'
+alias vi='vim'
 
 echo 'Hello, Captain!'
