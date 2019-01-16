@@ -1,4 +1,4 @@
-# Python Code Coverage
+# Python Code Coverage (by Test Cases)
 
 ## Installation
 
@@ -34,12 +34,14 @@ Check out https://github.com/Ziang-Lu/Software-Development-and-Design/blob/maste
 Output the report to the terminal:
 
 ```bash
-> coverage3 report -m  # -m will show the line numbers of the codes that are not covered
+> coverage3 report -m --fail-under=0.8
+# -m will show the line numbers of the codes that are not covered
+# --fail-under=MIN specifies that if the total coverage is < MIN, exit with a status of 2
 ```
 
 Generate a `htmlcov/` folder, which contains reports in html format:
 
 ```bash
-> coverage3 html
+> coverage3 html --fail-under=0.8 --title="Coverage Result"
 ```
 
