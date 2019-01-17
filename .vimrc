@@ -164,3 +164,8 @@ autocmd BufWritePost *.py call Flake8()
 " git clone git@github.com:plasticboy/vim-markdown.git
 let g:vim_markdown_math=1
 let g:vim_markdown_json_frontmatter=1
+
+" Setting for vim-gitgutter
+" cd ~/.vim/bundle
+" git clone git://github.com/airblade/vim-gitgutter.git
+let g:gitgutter_highlight_lines=1
