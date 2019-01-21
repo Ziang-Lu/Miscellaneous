@@ -168,4 +168,3 @@ let g:vim_markdown_json_frontmatter=1
 " Setting for vim-gitgutter
 " cd ~/.vim/bundle
 " git clone git://github.com/airblade/vim-gitgutter.git
-let g:gitgutter_highlight_lines=1
