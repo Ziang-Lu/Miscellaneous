@@ -114,6 +114,7 @@ Put the `my.cnf` file under `/etc` folder
 ### Java-Related Knowledges
 
 * <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Java-Related/Java%20Reference%20Types.md">Java reference types</a>
+* <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Java-Related/LinkedHashMapDemo.java">LinkedHashMap</a>
 
 ### Python-Related
 
