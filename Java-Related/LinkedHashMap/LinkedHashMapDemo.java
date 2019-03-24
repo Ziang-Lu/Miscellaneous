@@ -10,6 +10,11 @@ import java.util.Map;
  * @author Ziang Lu
  */
 public class LinkedHashMapDemo {
+
+    /**
+     * Main driver.
+     * @param args arguments from command line
+     */
     public static void main(String[] args) {
         System.out.println("===== HashMap demo =====");
         Map<Integer, String> hm = new HashMap<>();
@@ -41,6 +46,10 @@ public class LinkedHashMapDemo {
         // {1=a, 2=b, 4=new d}
     }
 
+    /**
+     * Private helper method to put entries into the given map.
+     * @param map map to put entries in
+     */
     private static void putEntriesToMap(Map<Integer, String> map) {
         map.put(1, "a");
         map.put(4, "d");
