@@ -11,29 +11,42 @@ import java.util.Map;
  */
 public class LinkedHashMapDemo {
     public static void main(String[] args) {
-        System.out.println("===== HashMap elements: =====");
+        System.out.println("===== HashMap demo =====");
         Map<Integer, String> hm = new HashMap<>();
-        hm.put(1, "a");
-        hm.put(4, "d");
-        hm.put(2, "b");
-        hm.put(4, "new d");
-        System.out.println(hm);
+        putEntriesToMap(hm);
 
         System.out.println();
 
-        System.out.println("===== LinkedHashMap elements: =====");
+        System.out.println("===== LinkedHashMap demo =====");
         Map<Integer, String> lhm = new LinkedHashMap<>();
-        lhm.put(1, "a");
-        lhm.put(4, "d");
-        lhm.put(2, "b");
-        lhm.put(4, "new d");
-        System.out.println(lhm);
+        putEntriesToMap(lhm);
+
+        System.out.println();
+
+        System.out.println("===== LinkedHashMap (with access-order) demo =====");
+        Map<Integer, String> lhmAccessOrder = new LinkedHashMap<>(16, 0.75f, true);
+        putEntriesToMap(lhmAccessOrder);
 
         // Output:
-        // ===== HashMap elements: =====
+        // ===== HashMap demo =====
+        // {1=a, 2=b, 4=d}
         // {1=a, 2=b, 4=new d}
         //
-        // ===== LinkedHashMap elements: =====
+        // ===== LinkedHashMap demo =====
+        // {1=a, 4=d, 2=b}
         // {1=a, 4=new d, 2=b}
+        //
+        // ===== LinkedHashMap (with access-order) demo =====
+        // {1=a, 4=d, 2=b}
+        // {1=a, 2=b, 4=new d}
+    }
+
+    private static void putEntriesToMap(Map<Integer, String> map) {
+        map.put(1, "a");
+        map.put(4, "d");
+        map.put(2, "b");
+        System.out.println(map);
+        map.put(4, "new d");
+        System.out.println(map);
     }
 }
