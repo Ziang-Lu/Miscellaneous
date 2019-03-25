@@ -6,7 +6,8 @@ import java.util.Map;
  *
  * @author Ziang Lu
  */
-public class LRUCache<K, V> extends LinkedHashMap<K, V> {
+public class LRUCacheWithLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
+
     /**
      * Cache size.
      */
@@ -26,5 +27,6 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
     public boolean removeEldestEntry(Map.Entry<K, V> entry) {
         return this.size() > cacheSize;
     }
+
 }
 
