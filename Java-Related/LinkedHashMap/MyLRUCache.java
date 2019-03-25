@@ -10,7 +10,7 @@ import java.util.Map;
  * @param <V> value type
  * @author Ziang Lu
  */
-public class LRUCache<K, V> {
+public class MyLRUCache<K, V> {
 
     /**
      * Inner ItemNode class.
@@ -67,7 +67,7 @@ public class LRUCache<K, V> {
      * Constructor with parameter.
      * @param cacheSize cache size
      */
-    public LRUCache(int cacheSize) {
+    public MyLRUCache(int cacheSize) {
         map = new HashMap<>();
         head = null;
         end = null;
@@ -116,7 +116,7 @@ public class LRUCache<K, V> {
      * @param node node to add
      */
     private void addNodeToEnd(ItemNode node) {
-        if (map.isEmpty()) {
+        if ((head == null) && (end == null)) {
             head = node;
             end = node;
             return;
