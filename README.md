@@ -119,9 +119,15 @@ Put the `my.cnf` file under `/etc` folder
 ### Python-Related
 
 * Knowledge
+  
   * <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Python-Related/Knowledge/Metaclass">Metaclass</a>
 * Python Standard Library
+  
   * <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Python%20Standard%20Modules%20Demo/argparse_demo.py">Python `argparse` module example</a>
+  
+  * `collections`-`OrderedDict`
+  
+    This is very similar to `LinkedHashMap` in `Java`.
 
 ### Development-Related
 
