@@ -1,14 +1,14 @@
 # Python Code Coverage (by Test Cases)
 
-## Installation
+## `coverage`
+
+### Installation
 
 ```bash
 > pip3 install coverage
 ```
 
-<br>
-
-## Usage
+### Usage
 
 ***
 
@@ -62,5 +62,49 @@ if debug:  # pragma: no cover
     log_message(msg, a)
 b = my_func2()
 # Note that "# pragma: no cover" will exclude the entire clause, function or class definition
+```
+
+<br>
+
+## `pytest-cov`
+
+Prerequisite: Unit testing by `pytest`
+
+### Installation
+
+```bash
+> pip3 install pytest-cov
+```
+
+### Usage
+
+* **Statement Coverage**
+
+  ```bash
+  > pytest --cov=myproj tests/
+  ```
+
+  Folder to test coverage against: `myproj/`
+
+  Folder containing the tests (`test_*.py` and `*_test.py`): `tests/`
+
+* **Branch Coverage**
+
+  ```bash
+  > pytest --cov-branch --cov=myproj tests/
+  ```
+
+**Output the report to the terminal:**
+
+```bash
+> pytest --cov-report term-missing:skip-covered --cov=myproj tests/
+# --cov-report term-missing will show the line numbers of the codes that are not covered
+# :skip-covered will skip the files with complete coverage
+```
+
+**Generate a `htmlcov/` folder, which contains reports in html format:**
+
+```bash
+> pytest --cov-report html:htmlcov --cov=myproj tests/
 ```
 

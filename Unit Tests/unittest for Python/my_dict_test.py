@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-unittest module module.
+unittest demo module.
 """
 
 __author__ = 'Ziang Lu'
@@ -35,7 +35,7 @@ class TestDict(unittest.TestCase):
         """
         print('Tearing down the single test...')
 
-    def test_init(self) -> None:
+    def test_init(self):
         """
         Any single method starts with "test" will be tested by the framework.
         """
@@ -44,23 +44,23 @@ class TestDict(unittest.TestCase):
         self.assertEqual(d.a, 1)
         self.assertEqual(d.b, 'test')
 
-    def test_key(self) -> None:
+    def test_key(self):
         d = MyDict()
         d['key'] = 'value'
         self.assertEqual(d.key, 'value')
 
-    def test_keyerror(self) -> None:
+    def test_keyerror(self):
         d = MyDict()
         with self.assertRaises(KeyError):
             d['key']
 
-    def test_attr(self) -> None:
+    def test_attr(self):
         d = MyDict()
         d.key = 'value'
         self.assertTrue('key' in d)
         self.assertEqual(d['key'], 'value')
 
-    def test_attrerror(self) -> None:
+    def test_attrerror(self):
         d = MyDict()
         with self.assertRaises(AttributeError):
             d.key
