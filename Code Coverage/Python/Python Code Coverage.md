@@ -68,7 +68,7 @@ b = my_func2()
 
 ## `pytest-cov`
 
-Prerequisite: <a href="[https://github.com/Ziang-Lu/Miscellaneous/tree/master/Unit%20Tests/pytest%20for%20Python](https://github.com/Ziang-Lu/Miscellaneous/tree/master/Unit Tests/pytest for Python)">Unit testing by `pytest`</a>
+Prerequisite: <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Unit%20Tests/pytest%20for%20Python">Unit testing by `pytest`</a>
 
 ### Installation
 
