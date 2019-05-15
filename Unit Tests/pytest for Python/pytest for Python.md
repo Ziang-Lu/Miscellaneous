@@ -41,3 +41,7 @@ Check out `test_my_dict_func.py` and `test_my_dict_class.py` for test discovery 
 # => Run tests whose custom mark is "linux" or "mac"
 ```
 
+*Side Note:*
+
+*Using `pytest.raises` is likely to be better for cases where you are testing exceptions your own code is deliberately raising, whereas using `@pytest.mark.xfail()` with a check function is probably better for something like documenting unfixed bugs or bugs in dependencies.*
+
