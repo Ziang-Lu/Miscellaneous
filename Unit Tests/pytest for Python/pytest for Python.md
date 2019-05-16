@@ -49,11 +49,11 @@ Check out `test_my_dict_func.py` and `test_my_dict_class.py` for test discovery 
 
 *(Can be regarded as … functions?)*
 
-=> Fixtures can be used to do some useful work before/after a single test function / test module / test session.
+=> Fixture functions can be used to do some useful work before/after a single test function / test module / test session.
 
 <u>Scopes:</u> Run once
 
-* per test
+* per test function
 * per module
 * per session
 

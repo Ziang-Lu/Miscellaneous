@@ -64,9 +64,9 @@ def is_prime_member(user: User) -> bool:
 # Assumption: creating a user is a very resource-consuming process
 # => Thus, we don't want to do user creation every time we run a test.
 #
-# However by default, pytest.fixture has "test" scope, meaning that still we'll
-# create a user for every test, and every test individually gets its own test
-# user.
+# However by default, pytest.fixture has "function" scope, meaning that still
+# we'll create a user for every test, and every test individually gets its own
+# test user.
 # => Thus, we need to change the fixture scope to "module".
 @pytest.fixture(scope='module')
 def user():
@@ -81,8 +81,8 @@ def user():
 
 
 # When a test function sees that its parameter name matches a fixture name
-# (here, "user"), it will call that fixture at the appropriate scope (here,
-# "module").
+# (here, "user"), it will call that fixture function at the appropriate scope
+# (here, "module").
 def test_is_member(user):
     assert not is_member(user)
 
