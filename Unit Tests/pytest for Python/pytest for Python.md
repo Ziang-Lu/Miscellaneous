@@ -45,3 +45,18 @@ Check out `test_my_dict_func.py` and `test_my_dict_class.py` for test discovery 
 
 *Using `pytest.raises` is likely to be better for cases where you are testing exceptions your own code is deliberately raising, whereas using `@pytest.mark.xfail()` with a check function is probably better for something like documenting unfixed bugs or bugs in dependencies.*
 
+**Fixtures**
+
+*(Can be regarded as … functions?)*
+
+=> Fixtures can be used to do some useful work before/after a single test function / test module / test session.
+
+<u>Scopes:</u> Run once
+
+* per test
+* per module
+* per session
+
+(Just like the classic `setup()` and `teardown()` functions!)
+
+Check out `fixture_demo.py`
