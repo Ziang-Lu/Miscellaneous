@@ -11,9 +11,10 @@
 Check out `test_my_dict_func.py` and `test_my_dict_class.py` for test discovery rules
 
 ```bash
-> pytest -v tests/
-# tests/ contains the test files ("test_*.py" and "*_test.py")
+> pytest -v -s tests/
 # -v increase verbosity
+# -s or --capture=no allows print statements inside test functions to be printed to terminal
+# tests/ contains the test files ("test_*.py" and "*_test.py")
 ```
 
 **Skip some tests (maybe on some condition)**
@@ -59,4 +60,11 @@ Check out `test_my_dict_func.py` and `test_my_dict_class.py` for test discovery 
 
 (Just like the classic `setup()` and `teardown()` functions!)
 
+***
+
+Note that we can also define `setup_module(module)` and `teardown_module(module)` functions, just like how they work in `unittest`!
+
+***
+
 Check out `fixture_demo.py`
+
