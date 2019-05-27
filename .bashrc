@@ -74,4 +74,10 @@ export PATH="/usr/local/redis/bin:$PATH"
 # Setting for Kaggle
 export PATH="/Users/Ziang_Lu/Library/Python/3.7/bin:$PATH"
 
+# Setting for ncurses
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ncurses/lib"
+export CPPFLAGS="-I/usr/local/opt/ncurses/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ncurses/lib/pkgconfig"
+
 echo 'Hello, Captain!'

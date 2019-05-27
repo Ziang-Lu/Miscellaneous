@@ -55,13 +55,19 @@ export PATH="/usr/local/redis/bin:$PATH"
 # Setting for Kaggle
 export PATH="/Users/Ziang_Lu/Library/Python/3.7/bin:$PATH"
 
+# Setting for ncurses
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ncurses/lib"
+export CPPFLAGS="-I/usr/local/opt/ncurses/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ncurses/lib/pkgconfig"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Ziang_Lu/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME='pygmalion'
+ZSH_THEME='steeef'
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -85,6 +91,9 @@ CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"

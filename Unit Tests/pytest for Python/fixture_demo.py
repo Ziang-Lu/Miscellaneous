@@ -70,7 +70,10 @@ def is_prime_member(user: User) -> bool:
 # => Thus, we need to change the fixture scope to "module".
 @pytest.fixture(scope='module')
 def user():
-    test_user = User(name='William', pwd='iamtom')
+    """
+    Creates and returns a temporary test user.
+    """
+    test_user = User(name='Williams', pwd='iamwill')
     # => This will work like "setup()".
     # return test_user
 
@@ -80,9 +83,9 @@ def user():
     test_user.clean_up()
 
 
-# When a test function sees that its parameter name matches a fixture name
-# (here, "user"), it will call that fixture function at the appropriate scope
-# (here, "module").
+# When a test function sees that its argument name matches a fixture name (here,
+# "user"), it will call that fixture function at the appropriate scope (here,
+# "module"), and takes the resulting fixture object as the argument.
 def test_is_member(user):
     assert not is_member(user)
 
