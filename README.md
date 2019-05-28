@@ -85,9 +85,11 @@ Check out the .jar file
 
 * `CodeGlance`
 
-* `Presentation Assistant`
+* `Git Flow Integration`
 
-* `IdeaVim`
+* `Grep Console`
+
+* `Presentation Assistant`
 
 * `Checkstyle`   *(IntelliJ IDEA)*
 
