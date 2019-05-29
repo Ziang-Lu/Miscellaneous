@@ -19,6 +19,9 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Setting for Pipenv auto completion
+eval "$(pipenv --completion)"
+
 # Setting for NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
