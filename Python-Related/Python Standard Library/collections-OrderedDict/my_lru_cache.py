@@ -50,8 +50,8 @@ class ItemNode:
 class MyLRUCache(dict):
     """
     My LRU Cache.
-    The idea is to decorate a dict with a doubly linked - list to keep track of
-    the access-order of the items.
+    The idea is to decorate a dict with a doubly linked-list to keep track of the
+    access-order of the items.
     """
     __slots__ = ['_head', '_end', '_cache_size']
 
