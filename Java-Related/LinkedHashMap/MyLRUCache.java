@@ -19,7 +19,7 @@ public class MyLRUCache<K, V> {
         /**
          * Key of the item.
          */
-        private K key;
+        private final K key;
         /**
          * Value of the item.
          */

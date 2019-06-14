@@ -11,7 +11,7 @@ public class LRUCacheWithLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
     /**
      * Cache size.
      */
-    private int cacheSize;
+    private final int cacheSize;
 
     /**
      * Constructor with parameter.
