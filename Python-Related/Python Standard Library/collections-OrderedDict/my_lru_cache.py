@@ -17,6 +17,11 @@ class ItemNode:
     __slots__ = ['_key', '_val']
 
     def __init__(self, key: Any, val: Any):
+        """
+        Constructor with parameter.
+        :param key: Any
+        :param val: Any
+        """
         self._key = key
         self._val = val
         self._prev = None
@@ -58,7 +63,7 @@ class MyLRUCache(dict):
     def __init__(self, cache_size: int):
         """
         Constructor with parameter.
-        : param cache_size: int
+        :param cache_size: int
         """
         self._head = None
         self._end = None
@@ -73,7 +78,7 @@ class MyLRUCache(dict):
 
     def _move_node_to_end(self, node: ItemNode) -> None:
         """
-        Private helper function to move the given node to the end of the doubly
+        Private helper method to move the given node to the end of the doubly
         linked-list.
         :param node: ItemNode
         """
@@ -93,7 +98,7 @@ class MyLRUCache(dict):
 
     def _add_node_to_end(self, node: ItemNode) -> None:
         """
-        Helper function to add the given node to the end of the doubly
+        Helper method to add the given node to the end of the doubly
         linked-list.
         :param node: ItemNode
         """
