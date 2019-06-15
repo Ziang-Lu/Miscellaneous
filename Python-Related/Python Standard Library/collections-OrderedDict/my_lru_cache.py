@@ -73,6 +73,8 @@ class MyLRUCache(dict):
         if key not in self:
             return None
         node = super().__getitem__(key)
+        # Note that since we need to keep access-order, we need to move the
+        # accessed node to the end
         self._move_node_to_end(node)
         return node.value
 
@@ -91,8 +93,8 @@ class MyLRUCache(dict):
             self._head = head_next
         else:  # Remove the given node by reconnecting the previous and next nodes
             node.prev.next = node.next
-            node.next.prev = node.prev
             node.prev = None
+            node.next.prev = node.prev
             node.next = None
         self._add_node_to_end(node)
 
@@ -113,12 +115,15 @@ class MyLRUCache(dict):
         if key in self:
             node = super().__getitem__(key)
             node.val = value
+            # Note that since we need to keep access-order, we need to move the
+            # accessed node to the end
             self._move_node_to_end(node)
         else:
             if len(self) >= self._cache_size:  # Reach cache limit
-                # Remove the least recently used item
+                # Remove the least recently used item (head)
                 super().remove(self._head.key)
                 head_next = self._head.next
+                self._head.next = None
                 if head_next:
                     head_next.prev = None
                 self._head = head_next

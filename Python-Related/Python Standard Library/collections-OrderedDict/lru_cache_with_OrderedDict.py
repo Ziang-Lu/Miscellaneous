@@ -26,13 +26,17 @@ class LRUCache(OrderedDict):
 
     def __getitem__(self, key):
         value = super().__getitem__(key)
+        # Note that since we need to keep access-order, we need to move the
+        # accessed node to the end
         self.move_to_end(key)
         return value
 
     def __setitem__(self, key, value):
         super().__setitem__(key, value)
+        # Note that since we need to keep access-order, we need to move the
+        # accessed node to the end
         self.move_to_end(key)
         if len(self) > self._cache_size:  # When full
             # Evect the least recently looked-up key
-            oldest = next(iter(self))
-            del self[oldest]
+            eldest = next(iter(self))
+            del self[eldest]

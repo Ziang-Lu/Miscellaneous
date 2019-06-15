@@ -25,6 +25,7 @@ public class LRUCacheWithLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
 
     @Override
     public boolean removeEldestEntry(Map.Entry<K, V> entry) {
+        // When this condition is met, the eldest entry is removed.
         return this.size() > cacheSize;
     }
 

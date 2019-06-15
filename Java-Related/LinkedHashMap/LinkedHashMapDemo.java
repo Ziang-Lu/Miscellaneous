@@ -48,7 +48,7 @@ public class LinkedHashMapDemo {
 
     /**
      * Private helper method to put entries into the given map.
-     * @param map map to put entries in
+     * @param map map to put entries into
      */
     private static void putEntriesToMap(Map<Integer, String> map) {
         map.put(1, "a");

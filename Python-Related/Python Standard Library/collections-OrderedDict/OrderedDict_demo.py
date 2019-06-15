@@ -33,6 +33,8 @@ class AccessOrderedDict(OrderedDict):
 
     def __setitem__(self, key: Any, value: Any):
         super().__setitem__(key, value)
+        # Note that since we need to keep access-order, we need to move the
+        # accessed node to the end
         super().move_to_end(key)
 
 

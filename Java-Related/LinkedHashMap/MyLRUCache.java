@@ -27,11 +27,11 @@ public class MyLRUCache<K, V> {
         /**
          * Previous item.
          */
-        private ItemNode prev = null;
+        private ItemNode prev;
         /**
          * Next item.
          */
-        private ItemNode next = null;
+        private ItemNode next;
 
         /**
          * Constructor with parameter.
@@ -41,13 +41,15 @@ public class MyLRUCache<K, V> {
         ItemNode(K key, V val) {
             this.key = key;
             this.val = val;
+            prev = null;
+            next = null;
         }
     }
 
     /**
      * Map of the items.
      */
-    private Map<K, ItemNode> map;
+    private final Map<K, ItemNode> map;
     /**
      * Head of the doubly linked-list, which represents the least recently used
      * item.
@@ -61,7 +63,7 @@ public class MyLRUCache<K, V> {
     /**
      * Cache size.
      */
-    private int cacheSize;
+    private final int cacheSize;
 
     /**
      * Constructor with parameter.
@@ -84,6 +86,7 @@ public class MyLRUCache<K, V> {
             return null;
         }
         ItemNode node = map.get(key);
+        // Note that since we need to keep access-order, we need to move the accessed node to the end
         moveNodeToEnd(node);
         return node.val;
     }
@@ -104,8 +107,8 @@ public class MyLRUCache<K, V> {
             head = headNext;
         } else { // Remove the given node by reconnecting the previous and next nodes
             node.prev.next = node.next;
-            node.next.prev = node.prev;
             node.prev = null;
+            node.next.prev = node.prev;
             node.next = null;
         }
         addNodeToEnd(node);
@@ -136,12 +139,14 @@ public class MyLRUCache<K, V> {
         if (map.containsKey(key)) {
             ItemNode node = map.get(key);
             node.val = val;
+            // Note that since we need to keep access-order, we need to move the accessed node to the end
             moveNodeToEnd(node);
         } else {
             if (map.size() >= cacheSize) { // Reach cache limit
-                // Remove the least recently used item
+                // Remove the least recently used item (head)
                 map.remove(head.key);
                 ItemNode headNext = head.next;
+                head.next = null;
                 if (headNext != null) {
                     headNext.prev = null;
                 }
