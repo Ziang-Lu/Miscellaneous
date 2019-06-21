@@ -131,12 +131,8 @@ Put the `my.cnf` file under `/etc` folder
   
     This is very similar to `LinkedHashMap` in `Java`.
 
-### Development-Related
+<br>
 
-|        | Logging                                                      | Unit tests                                                   | Code coverage (by test cases)                                | Profling                                                     |
-| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Java   |                                                              | <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Unit%20Tests/JUnit%20for%20Java">`JUnit`</a> |                                                              |                                                              |
-| Python | <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Logging/err.py">`logging`</a> | <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Unit%20Tests/unittest%20for%20Python">`unittest`</a><br><a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Unit%20Tests/pytest%20for%20Python">`pytest`</a> | <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Code%20Coverage/Python/Python%20Code%20Coverage.md">Overview</a><br>`coverage`<br>`pytest-cov` | <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Profiling/Python%20Profiling.md">Overview</a><br>`time`<br>`timeit`<br>`cProfile` (+ `snakeviz`)<br>`line_profiler`<br>`yappi` |
 ## License
 
  This repo is distributed under the <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/LICENSE">MIT license</a>.
