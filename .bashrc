@@ -50,11 +50,6 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
-# Setting for SQLite
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/sqlite/lib"
-export CPPFLAGS="-I/usr/local/opt/sqlite/incldue"
-
 # Setting for MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
 
@@ -73,9 +68,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/postgresql@9.6/lib/pkgconfig"
 
 # Setting for Redis
 export PATH="/usr/local/redis/bin:$PATH"
-
-# Setting for Kaggle
-export PATH="/Users/Ziang_Lu/Library/Python/3.7/bin:$PATH"
 
 # Setting for ncurses
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
