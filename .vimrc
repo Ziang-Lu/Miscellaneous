@@ -124,6 +124,12 @@ set wildignore+=*/coverage/*
 " git submodule update --init
 let g:jedi#use_tabs_not_buffers = 1
 
+" Settings for NERD Commenter
+" (Conveniently comment codes)
+" cd ~/.vim/bundle
+" git clone https://github.com/scrooloose/nerdcommenter.git
+let g:NERDSpaceDelims = 1
+
 " Settings for Python foldering
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
@@ -159,12 +165,12 @@ autocmd BufWritePost *.py call Flake8()
 " cd ~/.vim/bundle
 " git clone git@github.com:elzr/vim-json.git
 
-" Setting for vim-markdown
+" Settings for vim-markdown
 " cd ~/.vim/bundle
 " git clone git@github.com:plasticboy/vim-markdown.git
 let g:vim_markdown_math=1
 let g:vim_markdown_json_frontmatter=1
 
-" Setting for vim-gitgutter
+" Settings for vim-gitgutter
 " cd ~/.vim/bundle
 " git clone git://github.com/airblade/vim-gitgutter.git
