@@ -51,6 +51,7 @@ For Python auto-formatters like `Yapf`, check out https://github.com/google/yapf
 * `SublimeLinter-pylint`   (for Python only)
 * `SublimeLinter-flake8`   (for Python only)
 * `DocBlockr`
+* `Dockerfile Syntax Highlighting`
 * `GitGutter`
 
 Note that in order to use `subl` command, do the following to create a soft link to that command-line tool:
