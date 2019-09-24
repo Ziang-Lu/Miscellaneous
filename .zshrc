@@ -11,9 +11,6 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Setting for openssl
 export PATH="/usr/local/opt/openssl/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
 # Setting for Python 3 encoding
 export LC_ALL=en_US.UTF-8
@@ -28,14 +25,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Setting for Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
 # Setting for SQLite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/sqlite/lib"
-export CPPFLAGS="-I/usr/local/opt/sqlite/include"
-export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 
 # Setting for MySQL
 export PATH="/usr/local/mysql/bin:$PATH"
@@ -43,24 +35,15 @@ export PATH="/usr/local/mysql/bin:$PATH"
 # Setting for icu4c
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export LDFLAGS="-L/usr/local/opt/icu4c/lib"
-export CPPFLAGS="-I/usr/local/opt/icu4c/include"
-export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
 
 # Setting for PostgreSQL
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/postgresql@9.6/lib"
-export CPPFLAGS="-I/usr/local/opt/postgresql@9.6/include"
-export PKG_CONFIG_PATH="/usr/local/opt/postgresql@9.6/lib/pkgconfig"
 
 # Setting for Redis
 export PATH="/usr/local/redis/bin:$PATH"
 
 # Setting for ncurses
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ncurses/lib"
-export CPPFLAGS="-I/usr/local/opt/ncurses/include"
-export PKG_CONFIG_PATH="/usr/local/opt/ncurses/lib/pkgconfig"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Ziang_Lu/.oh-my-zsh"
