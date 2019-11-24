@@ -88,9 +88,11 @@ render(3)  # Type-check error! Since an integer does NOT have a "render()" metho
 
 <br>
 
-## Best static type-checker `MyPy`
+## Static type-checker
 
--> Check out https://mypy.readthedocs.io/en/stable/
+`MyPy` -> Check out https://mypy.readthedocs.io/en/stable/
+
+`pytype` -> Added some features of a "compiler", check out https://github.com/google/pytype
 
 ***
 
@@ -122,3 +124,4 @@ This can be done by:
 
   Check out https://pypi.org/project/pyannotate/
 
+* `pytype` by Google as mentioned above
