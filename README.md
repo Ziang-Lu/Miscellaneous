@@ -60,15 +60,17 @@ Note that in order to use `subl` command, do the following to create a soft link
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
-#### - Visual Studio Code   (for JavaScript & HTML)   Extensions
+#### - Visual Studio Code   (for Python, JavaScript & HTML)   Extensions
 
 * `Material Theme`
 * `TODO Highlight`
+* `Python`
 * `JavaScript (ES6) code snippet`
 * `HTML CSS Support`
 * `Auto Close Tag`
 * `Auto Rename Tag`
 * `Live Server`
+* `Docker`
 
 <br>
 
