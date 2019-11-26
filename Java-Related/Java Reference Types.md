@@ -77,7 +77,7 @@ if (JVM内存紧张) {
 
 ```java
 Page prev = new Page();
-SoftReference<Page> softPrev = new SoftReference<>();
+SoftReference<Page> softPrev = new SoftReference<>(prev);
 // ...浏览下一页面
 // 点击后退按钮
 if (softPrev.get() != null) { // 内存还足够, 前一个页面还未被GC回收
