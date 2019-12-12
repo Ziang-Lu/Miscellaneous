@@ -12,11 +12,9 @@
 # echo "Hello $USERNAME, nice to meet you!"
 
 # IF CONDITIONAL
-# if [ "$USERNAME" == "Kevin" ]
-# then
+# if [ "$USERNAME" == "Kevin" ]; then
 #     echo "Your name is Kevin."
-# elif [ "$USERNAME" == "Brad" ]
-# then
+# elif [ "$USERNAME" == "Brad" ]; then
 #     echo "Your name is Brad."
 # else
 #     echo "Your name is NEITHER Kevin NOR Brad."
@@ -25,8 +23,7 @@
 # COMPARISON OPERATORS
 # NUM1=3
 # NUM2=5
-# if [ "$NUM1" -gt "$NUM2" ]
-# then
+# if [ "$NUM1" -gt "$NUM2" ]; then
 #     echo "$NUM1 is greater than $NUM2"
 # else
 #     echo "$NUM1 is less than $NUM2"
@@ -35,8 +32,7 @@
 
 # FILE OPERATORS
 # FILE="test.txt"
-# if [ -f "$FILE" ]
-# then
+# if [ -f "$FILE" ]; then
 #     echo "$FILE is a file"
 # else
 #     echo "$FILE is not a file"
