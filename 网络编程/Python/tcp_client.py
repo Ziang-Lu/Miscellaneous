@@ -12,9 +12,6 @@ import socket
 # Create an IPv4, TCP socket
 s = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
 
-# s.setblocking(False)  # Set to NON-BLOCKING
-# s.settimeout(1)  # Or, set a timeout value for all the interactions
-
 # Connect the socket to the server
 print("[CLIENT] Connecting to 127.0.0.1:9999...")
 s.connect(('127.0.0.1', 9999))
@@ -22,7 +19,10 @@ s.connect(('127.0.0.1', 9999))
 print(s.recv(1024).decode('utf-8'))
 for name in ['Michael', 'Tracy', 'Sarah']:
     s.send(name.encode('utf-8'))
+
     print(s.recv(1024).decode('utf-8'))
+    # In the server, we deliberately sleep for 1 second before replying, recv()
+    # will block here in the client.
 s.send(b'exit')
 
 # Close the socket
