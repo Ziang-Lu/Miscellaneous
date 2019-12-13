@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-TCP server demo.
+Demo of the TCP server with multi-threading for concurrent connections.
 """
 
 __author__ = 'Ziang Lu'
@@ -23,13 +23,13 @@ def tcp_worker(sock_conn: socket.socket, addr: Tuple[str, int]) -> None:
     """
     host, port = addr
     print(f'[SERVER] Connection accepted from {host}:{port}')
-    sock_conn.send(b'Welcome!')
+    sock_conn.sendall(b'Welcome!')
     while True:
         data = sock_conn.recv(1024)
         time.sleep(1)
         if not data or data.decode('utf-8') == 'exit':
             break
-        sock_conn.send(f"Hello, {data.decode('utf-8')}".encode('utf-8'))
+        sock_conn.sendall(f"Hello, {data.decode('utf-8')}".encode('utf-8'))
     sock_conn.close()
     print(f'[SERVER] Connection accepted from {host}:{port} CLOSED')
 

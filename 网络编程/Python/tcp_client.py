@@ -18,12 +18,12 @@ s.connect(('127.0.0.1', 9999))
 
 print(s.recv(1024).decode('utf-8'))
 for name in ['Michael', 'Tracy', 'Sarah']:
-    s.send(name.encode('utf-8'))
+    s.sendall(name.encode('utf-8'))
 
     print(s.recv(1024).decode('utf-8'))
     # In the server, we deliberately sleep for 1 second before replying, recv()
     # will block here in the client.
-s.send(b'exit')
+s.sendall(b'exit')
 
 # Close the socket
 s.close()
