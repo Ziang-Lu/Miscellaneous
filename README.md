@@ -36,6 +36,8 @@ For Python auto-formatters like `Yapf`, check out https://github.com/google/yapf
 
 Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linting
 
+* Check out `.eslintrc.json`
+
 <br>
 
 ### Text Editor
