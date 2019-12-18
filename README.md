@@ -30,6 +30,14 @@ For Python auto-formatters like `Yapf`, check out https://github.com/google/yapf
 
 <br>
 
+### JavaScript Linter Configuration
+
+`ESLint` is responsible for checking syntax errors and problems, while `Prettier` for auto-formatting our JavaScript codes.
+
+Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linting
+
+<br>
+
 ### Text Editor
 
 #### - Vim   (for all)   Configuration
@@ -66,6 +74,8 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 * `TODO Highlight`
 * `Python`
 * `JavaScript (ES6) code snippet`
+* `ESLint`
+* `Prettier`
 * `HTML CSS Support`
 * `Auto Close Tag`
 * `Auto Rename Tag`
@@ -116,6 +126,10 @@ Put the `my.cnf` file under `/etc` folder
 
 ## Miscellaneous Topics in Coding
 
+### General Knowledges
+
+* <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.md">网络编程 (via socket)</a>
+
 ### Java-Related Knowledges
 
 * <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Java-Related/Java%20Reference%20Types.md">Java reference types</a>
@@ -135,7 +149,8 @@ Put the `my.cnf` file under `/etc` folder
     This is very similar to `LinkedHashMap` in `Java`.
 
 * Static Type-Checking
-  * `typing` auxiliary examples
+  
+  * <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Python-Related/Static%20Type-Checking.md">`typing` auxiliary examples</a>
 
 <br>
 
