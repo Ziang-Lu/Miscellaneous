@@ -30,13 +30,11 @@ For Python auto-formatters like `Yapf`, check out https://github.com/google/yapf
 
 <br>
 
-### JavaScript Linter Configuration
+### JavaScript / TypeScript Linter Configuration
 
 `ESLint` is responsible for checking syntax errors and problems, while `Prettier` for auto-formatting our JavaScript codes.
 
-Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linting
-
-* Check out `.eslintrc.json`
+Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linting and https://github.com/Ziang-Lu/JavaScript-Learning-Notes/blob/master/TypeScript-crash-course/TypeScript%20Learning%20Notes.md#typescript-linting
 
 <br>
 
@@ -70,7 +68,7 @@ Note that in order to use `subl` command, do the following to create a soft link
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
-#### - Visual Studio Code   (for Python, JavaScript & HTML)   Extensions
+#### - Visual Studio Code   (for Python, JavaScript, TypeScript, HTML & CSS)   Extensions
 
 * `Material Theme`
 * `TODO Highlight`
