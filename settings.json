@@ -20,9 +20,16 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.formatOnSave": true,
     },
-    "eslint.alwaysShowStatus": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
-    "prettier.singleQuote": true
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": [
+        "javascript",
+        "typescript"
+    ],
+    "prettier.singleQuote": true,
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
