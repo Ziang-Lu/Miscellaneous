@@ -79,6 +79,7 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 * `HTML CSS Support`
 * `Auto Close Tag`
 * `Auto Rename Tag`
+* `Highlight Matching Tag`
 * `Live Server`
 * `Docker`
 
