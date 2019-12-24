@@ -24,9 +24,14 @@ public class UDPServer {
 
             // No need to listen for connections
 
+            // This while-loop is like an "event loop".
             while (true) {
                 DatagramPacket receivedPacket = new DatagramPacket(new byte[1024], 1024);
+                // By default, "DatagramSocket.receive()" is blocking, so the event loop will block here, waiting for
+                // some data to come in.
                 serverSocket.receive(receivedPacket);
+                // No firing up a new thread to handle the request here, since UDP simply  receives the data, and
+                // directly dumps back the new data
                 System.out.println("[SERVER] Received from " + receivedPacket.getSocketAddress());
                 String data = new String(receivedPacket.getData()).trim();
 

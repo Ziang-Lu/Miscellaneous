@@ -26,6 +26,9 @@ public class UDPClient {
                 sentPacket.setSocketAddress(new InetSocketAddress("127.0.0.1", 9999));
                 s.send(sentPacket);
 
+                // Although by default "DatagramSocket.receive()" is blocking, since the server immediately dumps back the new data
+                // when it receives some data, we won't notice this blocking time.
+
                 DatagramPacket receivedPacket = new DatagramPacket(new byte[1024], 1024);
                 s.receive(receivedPacket);
                 System.out.println(new String(receivedPacket.getData()).trim());

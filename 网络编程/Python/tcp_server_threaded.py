@@ -7,14 +7,14 @@ Demo of the TCP server with multi-threading for concurrent connections.
 
 __author__ = 'Ziang Lu'
 
-# import concurrent.futures as cf
+import concurrent.futures as cf
 import socket
 import socketserver
 import time
 from typing import Tuple
 
 
-def tcp_worker(sock_conn: socket.socket, addr: Tuple[str, int]) -> None:
+def tcp_worker(sock_conn, addr: Tuple[str, int]) -> None:
     """
     Thread function to handle TCP connection.
     :param sock_conn: socket
@@ -24,42 +24,47 @@ def tcp_worker(sock_conn: socket.socket, addr: Tuple[str, int]) -> None:
     host, port = addr
     print(f'[SERVER] Connection accepted from {host}:{port}')
     sock_conn.sendall(b'Welcome!')
+    # This while-loop is like an "event loop".
     while True:
+        # By default, "socket.recv()" is blocking, so the event loop will block
+        # here, waiting for some data to come in.
         data = sock_conn.recv(1024)
         time.sleep(1)
         if not data or data.decode('utf-8') == 'exit':
             break
         sock_conn.sendall(f"Hello, {data.decode('utf-8')}".encode('utf-8'))
     sock_conn.close()
-    print(f'[SERVER] Connection accepted from {host}:{port} CLOSED')
+    print(f'[SERVER] Connection from {host}:{port} CLOSED')
 
 
 ##### METHOD 1: With "socket" module #####
 
+# Create an IPv4, TCP socket
+server_sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
+# Bind the socket to server address "127.0.0.1:9999"
+server_sock.bind(('127.0.0.1', 9999))
+print('[SERVER] Server bound to 127.0.0.1:9999')
 
-# # Create an IPv4, TCP socket
-# server_sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
-# # Bind the socket to server address "127.0.0.1:9999"
-# server_sock.bind(('127.0.0.1', 9999))
-# print('[SERVER] Server bound to 127.0.0.1:9999')
+# Let the server socket start listening for connections requests
+server_sock.listen()  # Becomes a server socket
+print('[SERVER] Server listening for connection...')
 
-# # Let the server start listening for connections requests
-# server_sock.listen()  # Becomes a server socket
-# print('[SERVER] Listening for connection...')
-
-# # => Use a thread pool to reuse the thread, and thus improve performance
-# with cf.ThreadPoolExecutor(max_workers=50) as pool:
-#     try:
-#         while True:
-#             sock_conn, addr = server_sock.accept()  # Accepted a connection
-#             # We want to fire up a thread to handle the connection, so that the
-#             # server is not blocked away from other connections.
-#             # => Use a thread pool to reuse the thread, and thus improve
-#             #    performance
-#             pool.submit(tcp_worker, sock_conn, addr)
-#     except KeyboardInterrupt:
-#         # Close the server socket
-#         server_sock.close()
+# => Use a thread pool to reuse the thread, and thus improve performance
+with cf.ThreadPoolExecutor(max_workers=50) as pool:
+    try:
+        # This while-loop is like an "event loop".
+        while True:
+            # By default, "socket.accept()" is blocking, so the event loop will
+            # block here, waiting for a connection request.
+            sock_conn, addr = server_sock.accept()  # Accepted a connection
+            # We want to fire up a thread to handle the connection, so that the
+            # server is not blocked away from other connections.
+            # => Use a thread pool to reuse the thread, and thus improve
+            #    performance
+            pool.submit(tcp_worker, sock_conn, addr)
+    except KeyboardInterrupt:
+        # Close the server socket
+        server_sock.close()
 
 
 ##### METHOD 2: With "socketserver" module #####
@@ -100,6 +105,6 @@ except KeyboardInterrupt:
 
 # Output:
 # [SERVER] Server bound to 127.0.0.1:9999
-# [SERVER] Listening for connection...
+# [SERVER] Server listening for connection...
 # [SERVER] Connection accepted from 127.0.0.1:56389
-# [SERVER] Connection accepted from 127.0.0.1:56389 CLOSED
+# [SERVER] Connection from 127.0.0.1:56389 CLOSED

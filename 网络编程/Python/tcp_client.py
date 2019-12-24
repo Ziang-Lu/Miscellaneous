@@ -20,9 +20,9 @@ print(s.recv(1024).decode('utf-8'))
 for name in ['Michael', 'Tracy', 'Sarah']:
     s.sendall(name.encode('utf-8'))
 
+    # In the server, we deliberately sleep for 1 second before replying,
+    # "recv()" will block here in the client.
     print(s.recv(1024).decode('utf-8'))
-    # In the server, we deliberately sleep for 1 second before replying, recv()
-    # will block here in the client.
 s.sendall(b'exit')
 
 # Close the socket

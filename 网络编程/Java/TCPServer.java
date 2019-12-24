@@ -40,7 +40,10 @@ public class TCPServer {
 
                 out.writeUTF("Welcome!");
                 out.flush();
+                // This while-loop is like an "event loop".
                 while (true) {
+                    // By default, "Socket.readUTF()" is blocking, so the event loop will block here, waiting for some
+                    // data to come in.
                     String data = in.readUTF();
                     Thread.sleep(1000);
                     if (data.equals("") || data.equals("exit")) {
@@ -53,8 +56,7 @@ public class TCPServer {
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(
-                    String.format("[SERVER] Connection accepted from %s CLOSED", sock.getRemoteSocketAddress()));
+            System.out.println(String.format("[SERVER] Connection from %s CLOSED", sock.getRemoteSocketAddress()));
         }
     }
 
@@ -70,11 +72,14 @@ public class TCPServer {
             // connections requests
             serverSocket.bind(new InetSocketAddress("127.0.0.1", 9999));
             System.out.println("[Server] Server bound to 127.0.0.1:9999");
-            System.out.println("[SERVER] Listening for connection...");
+            System.out.println("[SERVER] Server listening for connection...");
 
             // => Use a thread pool to reuse the thread, and thus improve performance
             ExecutorService pool = Executors.newFixedThreadPool(50);
+            // This while-loop is like an "event loop".
             while (true) {
+                // By default, "ServerSocket.accept()" is blocking, so the event loop will block here, waiting for a
+                // connection request.
                 Socket sock = serverSocket.accept(); // Accepted a connection
                 // We want to fire up a thread to handle the connection, so that the server is not blocked away from
                 // other connections.
@@ -88,9 +93,9 @@ public class TCPServer {
         /*
          * Output:
          * [SERVER] Server bound to 127.0.0.1:9999
-         * [SERVER] Listening for connection...
+         * [SERVER] Server listening for connection...
          * [SERVER] Connection accepted from /127.0.0.1:59808
-         * [SERVER] Connection accepted from /127.0.0.1:59808 CLOSED
+         * [SERVER] Connection from /127.0.0.1:59808 CLOSED
          */
     }
 

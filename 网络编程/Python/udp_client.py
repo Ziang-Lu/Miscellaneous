@@ -14,6 +14,9 @@ s = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 
 for name in ['Michael', 'Tracy', 'Sarah']:
     s.sendto(name.encode('utf-8'), ('127.0.0.1', 9999))
+    # Although by default "socket.recv()" is blocking, since the server
+    # immediately dumps back the new data when it receives some data, we won't
+    # notice this blocking time.
     print(s.recv(1024).decode('utf-8'))
 
 # Close the socket

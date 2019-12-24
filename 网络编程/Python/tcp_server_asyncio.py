@@ -23,18 +23,20 @@ async def tcp_worker(sock_conn: socket.socket,
     host, port = addr
     print(f'[SERVER] Connection accepted from {host}:{port}')
     sock_conn.sendall(b'Welcome!')
+    # This while-loop is like an "event loop".
     while True:
+        # By default, "socket.recv()" is blocking, so the event loop will block
+        # here, waiting for some data to come in.
         data = sock_conn.recv(1024)
         await asyncio.sleep(1)
         if not data or data.decode('utf-8') == 'exit':
             break
         sock_conn.sendall(f"Hello, {data.decode('utf-8')}".encode('utf-8'))
     sock_conn.close()
-    print(f'[SERVER] Connection accepted from {host}:{port} CLOSED')
+    print(f'[SERVER] Connection from {host}:{port} CLOSED')
 
 
 ##### METHOD 1: With "socket" module #####
-
 
 # Create an IPv4, TCP socket
 server_sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
@@ -42,9 +44,9 @@ server_sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
 server_sock.bind(('127.0.0.1', 9999))
 print('[SERVER] Server bound to 127.0.0.1:9999')
 
-# Let the server start listening for connections requests
+# Let the server socket start listening for connections requests
 server_sock.listen()  # Becomes a server socket
-print('[SERVER] Listening for connection...')
+print('[SERVER] Server listening for connection...')
 
 try:
     while True:

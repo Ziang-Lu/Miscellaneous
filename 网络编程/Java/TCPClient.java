@@ -28,6 +28,8 @@ public class TCPClient {
             for (String name : names) {
                 out.writeUTF(name);
                 out.flush();
+                // In the server, we deliberately sleep for 1 second before replying, "readUTF()" will block here in the
+                // client.
                 System.out.println(in.readUTF());
             }
             out.writeUTF("exit");
