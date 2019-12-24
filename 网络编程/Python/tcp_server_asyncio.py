@@ -12,8 +12,7 @@ import socket
 from typing import Coroutine, Tuple
 
 
-async def tcp_worker(sock_conn: socket.socket,
-                     addr: Tuple[str, int]) -> Coroutine:
+async def tcp_worker(sock_conn, addr: Tuple[str, int]) -> Coroutine:
     """
     Coroutine to handle TCP connection.
     :param sock_conn: socket
