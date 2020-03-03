@@ -2,5 +2,5 @@
 
 # Simple call .bashrc
 if [ -f ~/.bashrc]; then
-    source ~/.bash_profile
+    source ~/.bashrc
 fi
