@@ -85,17 +85,7 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 <br>
 
-### IDE
-
-#### [Java]   IntelliJ IDEA Settings
-
-Check out the .jar file
-
-#### [Python]   PyCharm Settings
-
-* For adding `Isort` and `Flake8` as an external tools, follow similar procedures as https://github.com/timothycrosley/isort/wiki/isort-Plugins
-
-#### [All]   JetBrains Plugins
+### IDE (JetBrains Plugins)
 
 * `Material Theme UI`
 
