@@ -97,7 +97,11 @@ Check out the .jar file
 
 #### [All]   JetBrains Plugins
 
+* `Material Theme UI`
+
 * `CodeGlance`
+
+* `IdeaVim` (disabled)
 
 * `Git Flow Integration`
 
@@ -106,6 +110,8 @@ Check out the .jar file
 * `Presentation Assistant`
 
 * `Checkstyle`   *(IntelliJ IDEA)*
+
+* `Alibaba Java Coding Guidelines`   *(IntelliJ IDEA)*
 
 * `Pylint`   *(PyCharm)*
 
