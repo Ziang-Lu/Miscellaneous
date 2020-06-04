@@ -89,6 +89,8 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 * `Material Theme UI`
 
+* `Shell Script`
+
 * `CodeGlance`
 
 * `IdeaVim` (disabled)

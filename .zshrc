@@ -19,6 +19,9 @@ export LANG=en_US.UTF-8
 # Setting for Pipenv auto completion
 eval "$(pipenv --completion)"
 
+# Setting for VSCode command-line
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Setting for NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
