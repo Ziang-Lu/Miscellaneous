@@ -1,9 +1,5 @@
 # This script will run when a non-login shell is spawned.
 
-# Setting prompt text & color
-PS1="\e[0;32m \n [\u @ \h in \W]\n \$ \[\e[0m\]"
-export PS1;
-
 alias ..='cd ..'
 alias curl='curl -L'
 alias hi='history'
