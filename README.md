@@ -59,6 +59,7 @@ Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linti
 * `SublimeLinter-pylint`   (for Python only)
 * `SublimeLinter-flake8`   (for Python only)
 * `DocBlockr`
+* `nginx`
 * `Dockerfile Syntax Highlighting`
 * `GitGutter`
 
