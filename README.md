@@ -56,8 +56,6 @@ For package control, packages and the corresponding plugins, check out https://w
 * `BracketHighlighter`
 * `SublimeLinter`
 * `DocBlockr`
-* `nginx`
-* `Dockerfile Syntax Highlighting`
 * `GitGutter`
 
 Python:
@@ -65,6 +63,10 @@ Python:
 * `isort`
 * `SublimeLinter-pylint`
 * `SublimeLinter-flake8`
+
+Dev & Ops
+* `nginx`
+* `Dockerfile Syntax Highlighting`
 
 Note that in order to use `subl` command, do the following to create a soft link to that command-line tool:
 
@@ -76,10 +78,13 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 * `Material Theme`
 * `TODO Highlight`
+* `Rainbow Brackets`
 
 C/C++
 * `C/C++ (by Microsoft)`
 * `Header Source Switch`
+* `cpplint`
+* `clang-format`
 
 JavaScript / TypeScript
 * `JavaScript (ES6) code snippet`
