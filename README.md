@@ -47,21 +47,24 @@ Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linti
 
 #### - Sublime Text 3   (for all)   Preferences & Plugins
 
-* For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
+For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
+
 * `Package control`
 * `Material Theme`
 * `Sidebar Enhancements`
 * `SublimeCodeIntel`
-* `Anaconda`   (for Python only)
 * `BracketHighlighter`
 * `SublimeLinter`
-* `isort`   (for Python only)
-* `SublimeLinter-pylint`   (for Python only)
-* `SublimeLinter-flake8`   (for Python only)
 * `DocBlockr`
 * `nginx`
 * `Dockerfile Syntax Highlighting`
 * `GitGutter`
+
+Python:
+* `Anaconda`
+* `isort`
+* `SublimeLinter-pylint`
+* `SublimeLinter-flake8`
 
 Note that in order to use `subl` command, do the following to create a soft link to that command-line tool:
 
@@ -69,19 +72,30 @@ Note that in order to use `subl` command, do the following to create a soft link
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
-#### - Visual Studio Code   (for Python, JavaScript, TypeScript, HTML & CSS)   Extensions
+#### - VSCode Extensions
 
 * `Material Theme`
 * `TODO Highlight`
-* `Python`
+
+C/C++
+* `C/C++ (by Microsoft)`
+* `Header Source Switch`
+
+JavaScript / TypeScript
 * `JavaScript (ES6) code snippet`
 * `ESLint`
 * `Prettier`
+
+HTML & CSS
 * `HTML CSS Support`
 * `Auto Close Tag`
 * `Auto Rename Tag`
 * `Highlight Matching Tag`
+
+Web Development
 * `Live Server`
+
+Dev & Ops
 * `Docker`
 
 <br>
