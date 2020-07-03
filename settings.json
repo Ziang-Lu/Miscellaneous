@@ -12,7 +12,6 @@
     "editor.tabSize": 4,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-darker",
