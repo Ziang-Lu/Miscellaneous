@@ -45,7 +45,7 @@ Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linti
 * Check out `.vimrc`
 * Follow the instructions to create the directiories and install the corresponding plugins in the comments
 
-#### - Sublime Text 3   (for all)   Preferences & Plugins
+#### - Sublime Text 3 Preferences & Plugins
 
 For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
 
@@ -79,12 +79,27 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 * `Material Theme`
 * `TODO Highlight`
 * `Rainbow Brackets`
+* `Prettify JSON`
+* `GitLens`
 
 C/C++
 * `C/C++ (by Microsoft)`
+
 * `Header Source Switch`
+
 * `cpplint`
+
+  ```bash
+  $ sudo pip3 install cpplint
+  ```
+
 * `clang-format`
+
+  ```bash
+  $ brew install clang-format
+  ```
+
+* `CodeLLDB`
 
 JavaScript / TypeScript
 * `JavaScript (ES6) code snippet`

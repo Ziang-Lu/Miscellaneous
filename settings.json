@@ -1,24 +1,29 @@
 {
     "editor.detectIndentation": false,
-    "editor.fontFamily": "Monaco",
     "editor.fontSize": 13,
     "editor.formatOnPaste": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.rulers": [80, 120],
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
     "editor.snippetSuggestions": "top",
     "editor.suggestSelection": "first",
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "liveServer.settings.donotShowInfoMsg": true,
+
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-darker",
     "workbench.startupEditor": "newUntitledFile",
-    // For JavaScript, turn on format-on-save
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "clang-format.fallbackStype": "Google",
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true,
     },
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
@@ -26,10 +31,11 @@
     "eslint.alwaysShowStatus": true,
     "eslint.validate": [
         "javascript",
-        "typescript"
+"typescript"
     ],
     "prettier.singleQuote": true,
     "[html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "liveServer.settings.donotShowInfoMsg": true
 }
