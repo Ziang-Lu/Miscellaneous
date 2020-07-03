@@ -1,46 +1,43 @@
 {
-    "editor.detectIndentation": false,
-    "editor.fontSize": 13,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "editor.snippetSuggestions": "top",
-    "editor.suggestSelection": "first",
-    "editor.tabSize": 4,
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Material Theme Ocean High Contrast",
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
-    "workbench.startupEditor": "newUntitledFile",
-    "[cpp]": {
-        "editor.defaultFormatter": "xaver.clang-format"
-    },
-    "C_Cpp.updateChannel": "Insiders",
-    "clang-format.fallbackStype": "Google",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "eslint.alwaysShowStatus": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "eslint.validate": [
-        "javascript",
-        "typescript"
-    ],
-    "prettier.singleQuote": true,
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "liveServer.settings.donotShowInfoMsg": true
+  "editor.detectIndentation": false,
+  "editor.fontSize": 13,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 4,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Material Theme Ocean High Contrast",
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "workbench.startupEditor": "newUntitledFile",
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "C_Cpp.updateChannel": "Insiders",
+  "clang-format.fallbackStype": "Google",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript", "typescript"],
+  "prettier.singleQuote": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true
 }
