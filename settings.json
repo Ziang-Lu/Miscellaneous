@@ -22,19 +22,25 @@
     "C_Cpp.updateChannel": "Insiders",
     "clang-format.fallbackStype": "Google",
     "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "eslint.validate": [
         "javascript",
-"typescript"
+        "typescript"
     ],
     "prettier.singleQuote": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "liveServer.settings.donotShowInfoMsg": true
 }
