@@ -101,6 +101,19 @@ C/C++
 
 * `CodeLLDB`
 
+Python:
+
+* `Python`
+
+  ```bash
+  $ pip3 install autopep8
+  
+  # In settings for VS Code Python extension:
+  # Formatting: Autopep8 Args
+  # --in-place  # This will cause auto-formatting to NOT work. Why?
+  # --aggressive
+  ```
+
 JavaScript / TypeScript
 * `JavaScript (ES6) code snippet`
 * `ESLint`

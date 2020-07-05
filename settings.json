@@ -3,7 +3,10 @@
   "editor.fontSize": 13,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.snippetSuggestions": "top",
   "editor.suggestSelection": "first",
   "editor.tabSize": 4,
@@ -18,6 +21,12 @@
   },
   "C_Cpp.updateChannel": "Insiders",
   "clang-format.fallbackStype": "Google",
+  "python.autoComplete.addBrackets": true,
+  "python.formatting.autopep8Args": [
+    "--in-place",
+    "--aggressive"
+  ],
+  "python.linting.pydocstyleEnabled": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -25,7 +34,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["javascript", "typescript"],
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
   "prettier.singleQuote": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
