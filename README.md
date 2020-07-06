@@ -80,6 +80,8 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 * `TODO Highlight`
 * `Rainbow Brackets`
 * `Prettify JSON`
+* `Visual Studio IntelliCode`
+* `NineTab`
 * `GitLens`
 
 C/C++
@@ -107,11 +109,6 @@ Python:
 
   ```bash
   $ pip3 install autopep8
-  
-  # In settings for VS Code Python extension:
-  # Formatting: Autopep8 Args
-  # --in-place  # This will cause auto-formatting to NOT work. Why?
-  # --aggressive
   ```
 
 JavaScript / TypeScript
