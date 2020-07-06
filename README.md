@@ -51,7 +51,7 @@ For package control, packages and the corresponding plugins, check out https://w
 
 * `Package control`
 * `Material Theme`
-* `Sidebar Enhancements`
+* `vscode-icons`
 * `SublimeCodeIntel`
 * `BracketHighlighter`
 * `SublimeLinter`

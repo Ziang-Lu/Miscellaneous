@@ -13,7 +13,7 @@
   "files.trimTrailingWhitespace": true,
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Material Theme Ocean High Contrast",
-  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format",
