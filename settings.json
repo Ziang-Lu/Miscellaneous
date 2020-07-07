@@ -54,5 +54,6 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Microsoft",
   "tabnine.experimentalAutoImports": true
 }
