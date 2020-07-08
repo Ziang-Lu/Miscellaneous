@@ -81,7 +81,6 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 * `Rainbow Brackets`
 * `Prettify JSON`
 * `Visual Studio IntelliCode`
-* `NineTab`
 * `GitLens`
 
 C/C++
