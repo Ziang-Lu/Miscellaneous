@@ -109,6 +109,10 @@ Python:
   ```bash
   $ pip3 install autopep8
   ```
+  
+* `Anaconda`
+
+* `Pylance`
 
 JavaScript / TypeScript
 * `JavaScript (ES6) code snippet`
