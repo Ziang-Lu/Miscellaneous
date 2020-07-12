@@ -109,8 +109,6 @@ Python:
   ```bash
   $ pip3 install autopep8
   ```
-  
-* `Anaconda`
 
 * `Pylance`
 
