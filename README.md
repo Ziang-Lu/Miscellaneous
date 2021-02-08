@@ -77,16 +77,24 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 #### - VSCode Extensions
 
 * `Material Theme`
+* `Material Icon Theme`
+* `Atom One Dark Theme`
+* `One Dark Pro`
 * `TODO Highlight`
 * `Rainbow Brackets`
 * `Prettify JSON`
+* `Rainbow CSV`
 * `Visual Studio IntelliCode`
 * `GitLens`
+* `Git Graph`
+
+Bash
+
+* `Bash IDE`
+* `shell-format`
 
 C/C++
 * `C/C++ (by Microsoft)`
-
-* `Header Source Switch`
 
 * `cpplint`
 
@@ -100,7 +108,6 @@ C/C++
   $ brew install clang-format
   ```
 
-* `CodeLLDB`
 
 Python:
 
@@ -126,7 +133,10 @@ HTML & CSS
 Web Development
 * `Live Server`
 
-Dev & Ops
+Dev & Ops & Other tools
+* `Protobuf support`
+* `Thrift`
+* `Bazel`
 * `Docker`
 
 <br>
