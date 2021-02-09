@@ -76,17 +76,20 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 #### - VSCode Extensions
 
-* `Material Theme`
-* `Material Icon Theme`
-* `Atom One Dark Theme`
-* `One Dark Pro`
-* `TODO Highlight`
-* `Rainbow Brackets`
-* `Prettify JSON`
-* `Rainbow CSV`
+* Themes
+  * `Material Theme`
+  * `Material Icon Theme`
+  * `Atom One Dark Theme`
+  * `One Dark Pro`
+* General code highlighting
+  * `Rainbow Brackets`
+  * `TODO Highlight`
+  * `Prettify JSON`
+  * `Rainbow CSV`
 * `Visual Studio IntelliCode`
-* `GitLens`
-* `Git Graph`
+* Git
+  * `GitLens`
+  * `Git Graph`
 
 Bash
 
@@ -132,12 +135,16 @@ HTML & CSS
 
 Web Development
 * `Live Server`
+* RPC - Data transfer (Serialization / Deserialization)
+  * `Protobuf support`
+  * `Thrift`
 
-Dev & Ops & Other tools
-* `Protobuf support`
-* `Thrift`
-* `Bazel`
-* `Docker`
+Dev & Ops
+
+* Compiling & building
+  * `Bazel`
+* Packaging & running & composing
+  * `Docker`
 
 <br>
 
