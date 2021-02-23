@@ -13,18 +13,32 @@
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Material Theme Ocean High Contrast",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.startupEditor": "newUntitledFile",
+  "workbench.startupEditor": "none",
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.tabSize": 2
+  },
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format",
     "editor.tabSize": 2
   },
   "C_Cpp.updateChannel": "Insiders",
   "clang-format.fallbackStype": "Google",
+  "clang-format.language.java.enable": false,
+  "clang-format.language.javascript.enable": false,
+  "clang-format.language.typescript.enable": false,
   "python.autoComplete.addBrackets": true,
   "python.formatting.autopep8Args": [
     "--in-place",
     "--aggressive"
   ],
+  "python.analysis.completeFunctionParens": true,
+  "python.autoComplete.addBrackets": true,
+  "python.formatting.autopep8Args": [
+      "--in-place",
+      "--aggressive"
+  ],
+  "python.formatting.provider": "autopep8",
   "python.linting.pydocstyleEnabled": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -51,6 +65,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "liveServer.settings.donotShowInfoMsg": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.languageServer": "Pylance"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
