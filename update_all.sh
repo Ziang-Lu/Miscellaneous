@@ -9,4 +9,5 @@ for FOLDER in $FOLDERS
             git pull
             cd ..
         fi
+        sleep 1s
 done
