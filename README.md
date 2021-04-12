@@ -204,9 +204,9 @@ Put the `my.cnf` file under `/etc` folder
   * <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Python-Related/Knowledge/Metaclass">Metaclass</a>
 * Python Standard Library
   
-  * <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Python%20Standard%20Modules%20Demo/argparse_demo.py">Python `argparse` module example</a>
+  * <a href="https://github.com/Ziang-Lu/Miscellaneous/blob/master/Python-Related/Python%20Standard%20Library/argparse_demo.py">Python `argparse` module example</a>
   
-  * <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Python-Related/Python Standard Library/collections-OrderedDict">`collections`-`OrderedDict`</a>
+  * <a href="https://github.com/Ziang-Lu/Miscellaneous/tree/master/Python-Related/Python%20Standard%20Library/collections-OrderedDict">`collections`-`OrderedDict`</a>
   
     This is very similar to `LinkedHashMap` in `Java`.
 
