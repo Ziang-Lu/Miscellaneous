@@ -2,6 +2,7 @@
   "editor.detectIndentation": false,
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
   "editor.rulers": [
     80,
     120
@@ -10,17 +11,18 @@
   "editor.tabSize": 4,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "window.zoomLevel": 0,
   "workbench.colorTheme": "Material Theme Ocean High Contrast",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
+  "bazel.buildifierFixOnFormat": true,
+  "bazel.buildifierExecutable": "/Users/bytedance/buildtools/bazel-bin/buildifier/darwin_amd64_stripped/buildifier",
   "[c]": {
     "editor.defaultFormatter": "xaver.clang-format",
-    "editor.tabSize": 2
+    "editor.formatOnSave": true
   },
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format",
-    "editor.tabSize": 2
+    "editor.formatOnSave": true
   },
   "C_Cpp.updateChannel": "Insiders",
   "clang-format.fallbackStype": "Google",
@@ -65,5 +67,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "liveServer.settings.donotShowInfoMsg": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[proto3]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  }
 }
