@@ -1,74 +1,74 @@
 {
-  "editor.detectIndentation": false,
-  "editor.fontSize": 13,
-  "editor.formatOnSave": true,
-  "editor.linkedEditing": true,
-  "editor.rulers": [
-    80,
-    120
-  ],
-  "editor.snippetSuggestions": "top",
-  "editor.tabSize": 4,
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "workbench.colorTheme": "Material Theme Ocean High Contrast",
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.startupEditor": "none",
-  "bazel.buildifierFixOnFormat": true,
-  "bazel.buildifierExecutable": "/Users/bytedance/buildtools/bazel-bin/buildifier/darwin_amd64_stripped/buildifier",
-  "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format",
-    "editor.formatOnSave": true
-  },
-  "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format",
-    "editor.formatOnSave": true
-  },
-  "C_Cpp.updateChannel": "Insiders",
-  "clang-format.fallbackStype": "Google",
-  "clang-format.language.java.enable": false,
-  "clang-format.language.javascript.enable": false,
-  "clang-format.language.typescript.enable": false,
-  "python.autoComplete.addBrackets": true,
-  "python.formatting.autopep8Args": [
-    "--in-place",
-    "--aggressive"
-  ],
-  "python.analysis.completeFunctionParens": true,
-  "python.autoComplete.addBrackets": true,
-  "python.formatting.autopep8Args": [
-      "--in-place",
-      "--aggressive"
-  ],
-  "python.formatting.provider": "autopep8",
-  "python.linting.pydocstyleEnabled": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "eslint.alwaysShowStatus": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.validate": [
-    "javascript",
-    "typescript"
-  ],
-  "prettier.singleQuote": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "liveServer.settings.donotShowInfoMsg": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "[proto3]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  }
+    "editor.detectIndentation": false,
+    "editor.fontSize": 13,
+    "editor.formatOnSave": true,
+    "editor.linkedEditing": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.snippetSuggestions": "top",
+    "editor.tabSize": 4,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "none",
+    "bazel.buildifierExecutable": "/Users/bytedance/buildtools/bazel-bin/buildifier/darwin_amd64_stripped/buildifier",
+    "bazel.buildifierFixOnFormat": true,
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave": true
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave": true
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "clang-format.fallbackStype": "Google",
+    "clang-format.language.java.enable": false,
+    "clang-format.language.javascript.enable": false,
+    "clang-format.language.typescript.enable": false,
+    "python.autoComplete.addBrackets": true,
+    "python.formatting.autopep8Args": [
+        "--in-place",
+        "--aggressive"
+    ],
+    "python.analysis.completeFunctionParens": true,
+    "python.autoComplete.addBrackets": true,
+    "python.formatting.autopep8Args": [
+        "--in-place",
+        "--aggressive"
+    ],
+    "python.formatting.provider": "autopep8",
+    "python.linting.pydocstyleEnabled": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "typescript"
+    ],
+    "prettier.singleQuote": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[proto3]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    }
 }
