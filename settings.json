@@ -29,7 +29,6 @@
     "clang-format.language.java.enable": false,
     "clang-format.language.javascript.enable": false,
     "clang-format.language.typescript.enable": false,
-    "python.analysis.completeFunctionParens": true,
     "python.autoComplete.addBrackets": true,
     "python.formatting.autopep8Args": [
         "--in-place",
