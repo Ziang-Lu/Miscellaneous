@@ -76,44 +76,36 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 #### - VSCode Extensions
 
-* Themes
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+
+Themes
   * `Material Theme`
   * `Material Icon Theme`
   * `Atom One Dark Theme`
   * `One Dark Pro`
-* General code highlighting
+
+General code highlighting
   * `Rainbow Brackets`
   * `TODO Highlight`
   * `Prettify JSON`
   * `Rainbow CSV`
-* `Visual Studio IntelliCode`
-* Git
-  * `GitLens`
-  * `Git Graph`
 
-Bash
-
-* `Bash IDE`
-* `shell-format`
+`Visual Studio IntelliCode`
 
 C/C++
 * `C/C++ (by Microsoft)`
-
 * `cpplint`
-
   ```bash
   $ sudo pip3 install cpplint
   ```
 
 * `clang-format`
-
   ```bash
   $ brew install clang-format
   ```
 
 
-Python:
-
+Python
 * `Python`
 
   ```bash
@@ -122,7 +114,26 @@ Python:
 
 * `Pylance`
 
+Bash
+
+* `Bash IDE`
+* `shell-format`
+
+Git
+
+  * `GitLens`
+  * `Git Graph`
+
+Web Development
+
+* `Live Server`
+* RPC - Data transfer (Serialization / Deserialization)
+  * `Protobuf support`
+  * `Thrift`
+* `Thunder Client` for testing RESTful API
+
 JavaScript / TypeScript
+
 * `JavaScript (ES6) code snippet`
 * `ESLint`
 * `Prettier`
@@ -132,13 +143,6 @@ HTML & CSS
 * `Auto Close Tag`
 * `Auto Rename Tag`
 * `Highlight Matching Tag`
-
-Web Development
-* `Live Server`
-* RPC - Data transfer (Serialization / Deserialization)
-  * `Protobuf support`
-  * `Thrift`
-* `Thunder Client` for testing RESTful API
 
 Dev & Ops
 

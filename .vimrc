@@ -57,7 +57,7 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 " Allow folding
 set foldenable
 
-" Enable eouse
+" Enable mouse
 set mouse=a
 
 " Ignore upper/lower case when searching
