@@ -138,12 +138,6 @@ JavaScript / TypeScript
 * `ESLint`
 * `Prettier`
 
-HTML & CSS
-* `HTML CSS Support`
-* `Auto Close Tag`
-* `Auto Rename Tag`
-* `Highlight Matching Tag`
-
 Dev & Ops
 
 * Compiling & building
