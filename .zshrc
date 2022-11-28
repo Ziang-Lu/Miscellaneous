@@ -152,14 +152,10 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ll='ls -alh'
 alias ..='cd ..'
-alias curl='curl -L'
 alias hi='history'
-alias ls='ls'
-alias ll='ls -al'
-alias now='date +"%T"'
 alias sed='gsed'
-alias shuf='gshuf'
-alias vi='vim'
+alias curl='curl -L'
 
 echo 'Hello, Captain!'
