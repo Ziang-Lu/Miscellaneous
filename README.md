@@ -183,12 +183,6 @@ Dev & Ops
 
 <br>
 
-## MySQL Server Configuration
-
-Put the `my.cnf` file under `/etc` folder
-
-<br>
-
 ## Miscellaneous Topics in Coding
 
 ### General Knowledges
