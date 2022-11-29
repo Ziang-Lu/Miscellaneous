@@ -4,9 +4,13 @@ This repo contains a variety of topics, including:
 
 ## Development Environment Setup
 
-### Bash
+### Command Line Tools & Shell (Bash)
 
+* Some commonly-used commands
 * Bash profile file
+
+=> Check out `Dev. & Working Commands.md`
+
 * For oh-my-zsh installation and configuration, see
 
   * https://www.zhihu.com/question/20873070/answer/410248435
