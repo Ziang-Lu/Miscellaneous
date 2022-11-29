@@ -205,7 +205,7 @@ htop -u [username]
 ### Bash Basics & Scripting
 
 ```bash
-#! /bin/bash
+#!/bin/bash
 
 # ECHO COMMAND
 # echo "Hello, world!"
