@@ -205,45 +205,48 @@ htop -u [username]
 ### Bash Basics & Scripting
 
 ```bash
-#!/bin/bash
+#!/bin/zsh
+# Called "shebang"
 
 # ECHO COMMAND
-# echo "Hello, world!"
+echo "Hello, world!"
 
 # VARIABLES
-# NAME="Kevin"  # Uppercase by convention
-# echo "My name is $NAME."
+name="Kevin"
+name=$1  # Positional argument
+name=$(whoami)  # Execute `whoami`, and put the output in a variable
+echo "My name is $name."
 
-# USER INPUT
-# read -p "Enter your name: " USERNAME  # A variable is used to receive the user input.
-# echo "Hello $USERNAME, nice to meet you!"
+# READ USER INPUT
+read -p "Enter your name: " username  # A variable is used to receive the user input.
+echo "Hello $username, nice to meet you!"
 
 # IF CONDITIONAL
-# if [ "$USERNAME" == "Kevin" ]; then
-#     echo "Your name is Kevin."
-# elif [ "$USERNAME" == "Brad" ]; then
-#     echo "Your name is Brad."
-# else
-#     echo "Your name is NEITHER Kevin NOR Brad."
-# fi  # Close the if statement
+if [ "$username" == "Kevin" ]; then
+    echo "Your name is Kevin."
+elif [ "$username" == "Brad" ]; then
+    echo "Your name is Brad."
+else
+    echo "Your name is NEITHER Kevin NOR Brad."
+fi  # Close the if statement
 
 # COMPARISON OPERATORS
-# NUM1=3
-# NUM2=5
-# if [ "$NUM1" -gt "$NUM2" ]; then
-#     echo "$NUM1 is greater than $NUM2"
-# else
-#     echo "$NUM1 is less than $NUM2"
-# fi
+num1=3
+num2=5
+if [ "$num1" -gt "$num2" ]; then
+    echo "$num1 is greater than $num2"
+else
+    echo "$num1 is less than $num2"
+fi
 # Valid options: -eq, -ne, -gt, -ge, -lt, -le
 
 # FILE OPERATORS
-# FILE="test.txt"
-# if [ -f "$FILE" ]; then
-#     echo "$FILE is a file"
-# else
-#     echo "$FILE is not a file"
-# fi
+file="test.txt"
+if [ -f "$file" ]; then
+    echo "$file is a file"
+else
+    echo "$file is not a file"
+fi
 # Valid flags:
 # -f file  True if the provided string is a file
 # -d file  True if the file is a directory
@@ -256,41 +259,41 @@ htop -u [username]
 # -x file  ... executable
 
 # CASE CONDITIONAL
-# read -p "Are you 21 or over? Y/N " ANSWER
-# case "$ANSWER" in
-#     [yY] | [yY][eE][sS])  # Branch 1
-#         echo "You can have a beer :)"
-#         ;;
-#     [nN] | [nN][oO])  # Branch 2
-#         echo "Sorry, no drinking"
-#         ;;
-#     *)  # Default branch
-#         echo "Please enter y/yes or n/no"
-#         ;;
-# esac
+read -p "Are you 21 or over? Y/N " answer  ###
+case "$answer" in
+    [yY] | [yY][eE][sS])  # Branch 1
+        echo "You can have a beer :)"
+        ;;
+    [nN] | [nN][oO])  # Branch 2
+        echo "Sorry, no drinking"
+        ;;
+    *)  # Default branch
+        echo "Please enter y/yes or n/no"
+        ;;
+esac
 
 # FOR LOOP
-# NAMES="Kevin Brad Mark"
-# for NAME in $NAMES
-#     do
-#         echo "Hello $NAME"
-# done
+names="Kevin Brad Mark"
+for name in $names
+    do
+        echo "Hello $name"
+done
 
-# FOR LOOP TO RENAME FILES
-# FILES=$(ls *.txt)  # List all the files with ".txt" extension, and put them in a variable
-# for FILE in $FILES
-#     do
-#         echo "Renaming $FILE to new-$FILE"
-#         mv $FILE "new-$FILE"
-# done
+# e.g., FOR LOOP TO RENAME FILES
+files=$(ls *.txt)  ###
+for file in $files
+    do
+        echo "Renaming $file to new-$file"
+        mv $file "new-$file"
+done
 
 # WHILE LOOP
-# LINE=1
-# while read -r CURRENT_LINE
-#     do
-#         echo "$LINE: $CURRENT_LINE"
-#         ((LINE++))  # Increment the variable by 1
-# done > "./new.txt"
+line=1
+while read -r current_line  ###
+    do
+        echo "$line: $current_line"
+        ((line++))  # Increment the variable by 1
+done > "./new.txt"
 
 # FUNCTION
 function greet() {
