@@ -162,7 +162,7 @@ autocmd BufWritePost *.py call Flake8()
 " Settings for vim-json
 " (Better display JSON files)
 " cd ~/.vim/bundle
-" git clone git@github.com:elzr/vim-json.git
+" git clone git@github.com:leshill/vim-json.git
 
 " Settings for vim-markdown
 " cd ~/.vim/bundle
