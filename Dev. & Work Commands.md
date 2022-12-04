@@ -16,6 +16,18 @@ tldr [command]
 
 ### `printenv`: Print all the environment variables
 
+Some built-in environment variables:
+
+```bash
+$USER
+$SHELL
+$PWD
+
+$HOSTNAME
+
+$RANDOM  # Generate a random number between [0, 2^15-1 (32,767)]
+```
+
 
 
 ### File System Monitoring
