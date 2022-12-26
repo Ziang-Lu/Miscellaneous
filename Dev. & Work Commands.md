@@ -304,7 +304,7 @@ line=1
 while read -r current_line  ###
     do
         echo "$line: $current_line"
-        ((line++))  # Increment the variable by 1
+        ((line++))  # (()) does mathematical calculation within it. In this case, increment the variable by 1
 done > "./new.txt"
 
 # FUNCTION
@@ -326,6 +326,7 @@ git init
 
 # Search within the repo for a particular pattern of characters
 git grep 'some_keyword' [where to start searching from]
+git grep --files-with-matches 'some_keyword' [where to start searching from]  # ~, but only shows the containing files
 ```
 
 
