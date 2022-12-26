@@ -1,25 +1,14 @@
 # This script will run when a non-login shell is spawned.
 
+alias ll='ls -alh'
 alias ..='cd ..'
-alias curl='curl -L'
 alias hi='history'
-alias ll='ls -al'
-alias now='date +"%T"'
 alias sed='gsed'
-alias shuf='gshuf'
-alias vi='vim'
+alias curl='curl -L'
 
 # Setting listing colors
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-
-# Setting for less command with these default options
-LESS="-iNs"
-# Cause search to ignore case
-# Constantly display line numbers
-# Display "raw" control characters
-# Squeeze consecutive blank lines into one single blank line
-export LESS
 
 # Setting for coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"

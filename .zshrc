@@ -1,58 +1,4 @@
-# Setting for less command with these default options
-LESS="-iNRs"
-# Cause search to ignore case
-# Constantly display line numbers
-# Display "raw" control characters
-# Squeeze consecutive blank lines into one single blank line
-export LESS
-
-# Setting for coreutils
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-
-# Setting for openssl
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
-
-# Setting for Python 3 encoding
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-# Setting for Pipenv auto completion
-eval "$(pipenv --completion)"
-
-# Setting for VSCode command-line
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-# Setting for NVM (Node Version Manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-# Setting for Ruby
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-# Setting for SQLite
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-
-# Setting for MySQL
-export PATH="/usr/local/mysql/bin:$PATH"
-
-# Setting for icu4c
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-
-# Setting for PostgreSQL
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-
-# Setting for Redis
-export PATH="/usr/local/redis/bin:$PATH"
-
-# Setting for ncurses
-export PATH="/usr/local/opt/ncurses/bin:$PATH"
+source ~/.bashrc
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Ziang_Lu/.oh-my-zsh"
@@ -152,10 +98,5 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll='ls -alh'
-alias ..='cd ..'
-alias hi='history'
-alias sed='gsed'
-alias curl='curl -L'
 
 echo 'Hello, Captain!'
