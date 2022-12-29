@@ -50,6 +50,9 @@ highlight ColorColumn ctermbg=233
 " Do not automatically wrap lines on load
 set nowrap
 
+" Do not automatically add a newline at the end of file
+set nofixendofline
+
 " Show whitespace (MUST insert BEFORE colorscheme command)
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
