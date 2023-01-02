@@ -99,32 +99,29 @@ find ./GFG -name sample.txt -exec rm -i {} \;
 
 
 
-#### `cat` / `less`
+#### `cat` / `less`: Print out the contents of a file
 
 ```bash
+cat -n [filename]  # with line numbers
+
+# ~, without loading the entire file into memory
+less [filename]
+
 # Overwrite some contents to a file
 cat > [filename]
 # (command-d to stop inputting)
 
 # Append some contents to a file
 cat >> [filename]
-
-# Print out the contents of a file
-cat -n [filename]  # with line numbers
-
-# Print out the contents of a file, without loading the entire file into memory
-less [filename]
 ```
 
 
 
-#### `head` / `tail`
+#### `head` / `tail`: Print out the head/tail-part contents of a file
 
 ```bash
-# Print out the head-part contents of a file
 head -n 20 [filename]  # top 20 lines
 
-# ... tail-part ...
 tail -n 20 [filename]  # bottom 20 lines
 ```
 
