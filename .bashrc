@@ -3,6 +3,9 @@
 alias ll='ls -alh'
 alias ..='cd ..'
 alias hi='history'
+alias free='free -ht'
+alias df='df -h'
+alias du='du -ha'
 alias sed='gsed'
 alias curl='curl -L'
 

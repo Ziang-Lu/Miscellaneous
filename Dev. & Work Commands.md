@@ -14,33 +14,178 @@ tldr [command]
 
 
 
-### `printenv`: Print all the environment variables
+### `env` / `printenv`: Print all the *global* environment variables
 
 Some built-in environment variables:
 
 ```bash
 $USER
-$SHELL
+$SHELL  # Locationof current user's shell program
+
+$HOME
 $PWD
+
+$PATH  # Search path for commands
+
+$LANG  # Default system language
 
 $HOSTNAME
 
 $RANDOM  # Generate a random number between [0, 2^15-1 (32,767)]
 ```
 
-
-
-### File System Monitoring
-
-#### `df`: Report the disk usage on all currently mounted file systems
+Use `export` to export a local variable to global
 
 
 
-#### `du`: Summarize disk usage
+### Bash Basics & Scripting
 
 ```bash
-# ~, and print sizes in human-readble format
-du -h
+#!/bin/zsh
+# Called "shebang"
+
+# LOCAL variables
+NAME="Kevin"
+NAME=$1  # Positional argument
+NAME=$(whoami)  # Execute `whoami`, and put the output in a variable
+echo "My name is $NAME."
+
+# Read user input
+read -p "Enter your name: " USERNAME  # A variable is used to receive the user input.
+echo "Hello $USERNAME, nice to meet you!"
+
+# If conditional
+if [ "$USERNAME" == "Kevin" ]; then
+    echo "Your name is Kevin."
+elif [ "$USERNAME" == "Brad" ]; then
+    echo "Your name is Brad."
+else
+    echo "Your name is NEITHER Kevin NOR Brad."
+fi  # Close the if statement
+
+# Comparison operators
+NUM1=3
+NUM2=5
+if [ "$NUM1" -gt "$NUM2" ]; then
+    echo "$NUM1 is greater than $NUM2"
+else
+    echo "$NUM1 is less than $NUM2"
+fi
+# Valid options: -eq, -ne, -gt, -ge, -lt, -le
+
+# File operators
+FILE="test.txt"
+if [ -f "$FILE" ]; then
+    echo "$FILE is a file"
+else
+    echo "$FILE is not a file"
+fi
+# -f file  True if the provided string is a file
+# -d file  True if the file is a directory
+# -e file  True if the file exists (note that this is not particularly portable, so -f is generally used)
+# -s file  True if the file has a non-zero size
+# -g file  True if group id is set on the file
+# -u file  ... user id ...
+# -r file  True if the file is readable
+# -w file  ... writable
+# -x file  ... executable
+
+# Case conditional
+read -p "Are you 21 or over? Y/N " ANSWER  ### -> callback to above
+case "$ANSWER" in
+    [yY] | [yY][eE][sS])  # Branch 1
+        echo "You can have a beer :)"
+        ;;
+    [nN] | [nN][oO])  # Branch 2
+        echo "Sorry, no drinking"
+        ;;
+    *)  # Default branch
+        echo "Please enter y/yes or n/no"
+        ;;
+esac
+
+# For loop
+NAMES="Kevin Brad Mark"
+for name in $NAMES
+    do
+        echo "Hello $NAME"
+done
+# e.g., for loop to rename files
+FILES=$(ls *.txt)  ### -> callback to above
+for file in $FILES
+    do
+        echo "Renaming $FILE to new-$FILE"
+        mv $FILE "new-$FILE"
+done
+
+# While loop
+LINE=1
+while read -r CURRENT_LINE  ### -> callback to above
+    do
+        echo "$LINE: $CURRENT_LINE"
+        ((LINE++))  # (()) does mathematical calculation within it. In this case, increment the variable by 1
+done > "./new.txt"
+
+# Function
+function greet() {
+    echo "Hello, I am $1 and I am $2"  # Positional parameters
+}
+greet "Brad" 26
+```
+
+
+
+### System Monitoring
+
+#### `free`: Memory usage report
+
+```bash
+free -g  # ~, and print sizes in gigabytes
+# Valid size options: -b / -k (This is the default.) / -m / -g
+
+free -h  # ~, and print sizes in human-readable format
+
+free -t  # ~, and also report a total line
+```
+
+
+
+#### `top` / `htop`: Processes with top usage report
+
+`htop` is similar to `top`, but stronger.
+
+```bash
+htop -p [process_id]
+
+htop -U [username]
+
+# By default, sort by CPU usage
+htop -U [username] -o cpu
+# Valid sort-key options: pid / cpu / mem / threads
+```
+
+
+
+#### `df`: Disk usage (on all currently mounted file systems) report
+
+```bash
+df -h  # ~, and print sizes in human-readable format (power of 1024)
+```
+
+
+
+#### `du`: Disk usage (by files and directories) report
+
+```bash
+du -h  # ~, and print sizes in human-readable format (power of 1024)
+
+du -a  # Display an entry for each file in a file hierarchy
+```
+
+With `sort`, report the disk usage by files and directories <u>sorted by top sizes</u>
+
+```bash
+du -ha [directory_name] | sort -nr
 ```
 
 
@@ -59,12 +204,20 @@ du -h
 
 #### `dirname` / `basename`: Show the directory name, and the filename, respectively
 
-
-
-#### `find`: Find files and directories, and perhaps perform subsequent operations on them
+e.g.,
 
 ```bash
-find [where to start searching from] [expression determines what to find] [-options] [what to find]
+# basename without a specified trailing suffix
+basename 'include/stdio.h' .h  # <=> basename -s .h 'include/stdio.h'
+# "stdio"
+```
+
+
+
+#### `find`: Search for files and directories
+
+```bash
+find [where to search from] [expression determines what to find] [-options] [what to find]
 ```
 
 e.g.,
@@ -78,19 +231,22 @@ GFG
 ```
 
 ```bash
-# Search a file with specific name
+# Search for a file with a specific name
 find ./GFG -name sample.txt
 
-# Search files with pattern
+# Search for files with a specific name pattern
 find ./GFG -name *.txt
 # ~, and delete them
 find ./GFG -name *.txt --delete
+
+# Search for files with specific permission
+find ./GFG -perm /a=x
 
 # Search for empty files and directories
 find ./GFG -empty
 ```
 
-By using the `-exec`, other UNIX commands can be executed on files or folders found.
+<u>By using the `-exec`, other UNIX commands can be executed on files or folders found.</u>
 
 ```bash
 # Search a file with specific name, and delete with confirmation
@@ -102,10 +258,7 @@ find ./GFG -name sample.txt -exec rm -i {} \;
 #### `cat` / `less`: Print out the contents of a file
 
 ```bash
-cat -n [filename]  # with line numbers
-
-# ~, without loading the entire file into memory
-less [filename]
+cat -n [filename]  # ~, with line numbers
 
 # Overwrite some contents to a file
 cat > [filename]
@@ -113,6 +266,9 @@ cat > [filename]
 
 # Append some contents to a file
 cat >> [filename]
+
+# ~, without loading the entire file into memory
+less [filename]
 ```
 
 
@@ -120,9 +276,9 @@ cat >> [filename]
 #### `head` / `tail`: Print out the head/tail-part contents of a file
 
 ```bash
-head -n 20 [filename]  # top 20 lines
+head -n 20 [filename]  # ~, with top 20 lines
 
-tail -n 20 [filename]  # bottom 20 lines
+tail -n 20 [filename]  # ~, with bottom 20 lines
 ```
 
 
@@ -155,6 +311,14 @@ grep -c 'unix' [filename]  # print line counts, rather than the lines themselves
 
 
 
+#### `awk`: 
+
+```bash
+awk '{print $2}'
+```
+
+
+
 #### `sed`
 
 > ```bash
@@ -169,7 +333,31 @@ cat uids.csv | sed 's/$/,/g' > uids_new
 
 
 
-#### `tar`: Compress and decompress
+#### `sort`: Sort a file (without actually changing it in-place)
+
+```bash
+sort [filename]
+
+sort [filename] > [sorted_output_filename]
+
+# By default, blank lines or newline characters are used as record separators.
+sort -t '\t' [filename]  # ~, with '\t' as the record separator
+
+# By default, sort by ASCII codes
+sort -b [filename]  # ~, ignoring leading blank characters
+sort -f [filename]  # ~, ignoring cases
+sort -n numbers.txt  # ~, numerically
+
+sort -r [filename]  # ~, in reverse order
+
+sort -u [filename]  # ~, and remove duplicates
+```
+
+
+
+#### `tar` / `zip` & `unzip`: Compress and decompress
+
+e.g.,
 
 ```bash
 tar -c -zvf source.tar.gz src/
@@ -183,132 +371,33 @@ tar -t -zvf source.tar.gz
 
 tar -x -zvf source.tar.gz
 # -x: extract from archive
+
+zip source.zip src/
+
+unzip source.zip
 ```
 
 
 
-### Process Monitoring
+### Networking
 
-#### `top`
+#### `ip`: Check out IP address
 
 ```bash
-top -u [username]
+ip address
 ```
 
 
 
-#### `htop`
-
-Similar to `top`, but allows you to scroll vertically and horizontally,  so you can：
-
-- see all the procesess running on the system, along with their full command lines;
-- view them as a process tree
-- select multiple processes and act on them all at once
+####  `curl` / `wget`: File downloading / retrieving
 
 ```bash
-htop -u [username]
-```
+curl -L [file_url]  # download [file_url], and print to stdout
+curl -L [file_url] > [output_filename]  # ~, and dump to [output_filename]
 
-
-
-### Bash Basics & Scripting
-
-```bash
-#!/bin/zsh
-# Called "shebang"
-
-# ECHO COMMAND
-echo "Hello, world!"
-
-# VARIABLES
-name="Kevin"
-name=$1  # Positional argument
-name=$(whoami)  # Execute `whoami`, and put the output in a variable
-echo "My name is $name."
-
-# READ USER INPUT
-read -p "Enter your name: " username  # A variable is used to receive the user input.
-echo "Hello $username, nice to meet you!"
-
-# IF CONDITIONAL
-if [ "$username" == "Kevin" ]; then
-    echo "Your name is Kevin."
-elif [ "$username" == "Brad" ]; then
-    echo "Your name is Brad."
-else
-    echo "Your name is NEITHER Kevin NOR Brad."
-fi  # Close the if statement
-
-# COMPARISON OPERATORS
-num1=3
-num2=5
-if [ "$num1" -gt "$num2" ]; then
-    echo "$num1 is greater than $num2"
-else
-    echo "$num1 is less than $num2"
-fi
-# Valid options: -eq, -ne, -gt, -ge, -lt, -le
-
-# FILE OPERATORS
-file="test.txt"
-if [ -f "$file" ]; then
-    echo "$file is a file"
-else
-    echo "$file is not a file"
-fi
-# Valid flags:
-# -f file  True if the provided string is a file
-# -d file  True if the file is a directory
-# -e file  True if the file exists (note that this is not particularly portable, so -f is generally used)
-# -s file  True if the file has a non-zero size
-# -g file  True if group id is set on the file
-# -u file  ... user id ...
-# -r file  True if the file is readable
-# -w file  ... writable
-# -x file  ... executable
-
-# CASE CONDITIONAL
-read -p "Are you 21 or over? Y/N " answer  ###
-case "$answer" in
-    [yY] | [yY][eE][sS])  # Branch 1
-        echo "You can have a beer :)"
-        ;;
-    [nN] | [nN][oO])  # Branch 2
-        echo "Sorry, no drinking"
-        ;;
-    *)  # Default branch
-        echo "Please enter y/yes or n/no"
-        ;;
-esac
-
-# FOR LOOP
-names="Kevin Brad Mark"
-for name in $names
-    do
-        echo "Hello $name"
-done
-
-# e.g., FOR LOOP TO RENAME FILES
-files=$(ls *.txt)  ###
-for file in $files
-    do
-        echo "Renaming $file to new-$file"
-        mv $file "new-$file"
-done
-
-# WHILE LOOP
-line=1
-while read -r current_line  ###
-    do
-        echo "$line: $current_line"
-        ((line++))  # (()) does mathematical calculation within it. In this case, increment the variable by 1
-done > "./new.txt"
-
-# FUNCTION
-function greet() {
-    echo "Hello, I am $1 and I am $2"  # Positional parameters
-}
-greet "Brad" 26
+wget [file_url]  # download [file_url]
+wget -O - [file_url]  # ~, and print to stdout
+wget -O [output_filename] [file_url]  # ~, and dump to [output_filename]
 ```
 
 
