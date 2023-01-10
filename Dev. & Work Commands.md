@@ -257,10 +257,12 @@ find ./GFG -name sample.txt -exec rm -i {} \;
 
 #### `cat` / `less`: Print the contents of a file
 
-```bash
-cat -n [filename]  # ~, with line numbers
+`less`: ~, without loading the entire file into memory
 
-cat -s [filename]  # ~, and squeeze adjacent empty lines
+```bash
+cat/less -n [filename]  # ~, with line numbers
+
+cat/less -s [filename]  # ~, and squeeze adjacent empty lines
 
 # Overwrite some contents, to a file
 cat > [filename]  # (command-d to stop inputting)
@@ -273,17 +275,6 @@ cat [file1] [file2] [file3] > [file4]
 cat >> [filename]
 # Append the contents of file1, to file2
 cat [file1] >> [file2]
-```
-
-
-
-```bash
-# ~, without loading the entire file into memory
-less [filename]
-
-less -n [filename]  # ~, with line numbers
-
-less -s [filename]  # ~, and squeeze adjacent empty lines
 ```
 
 
