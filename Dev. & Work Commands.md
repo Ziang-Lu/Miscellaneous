@@ -217,7 +217,7 @@ basename 'include/stdio.h' .h  # <=> basename -s .h 'include/stdio.h'
 #### `find`: Search for files and directories
 
 ```bash
-find [where to search from] [expression determines what to find] [-options] [what to find]
+find [where_to_search_from] [expression_determining_what_to_find] [-options] [what_to_find]
 ```
 
 e.g.,
@@ -255,25 +255,40 @@ find ./GFG -name sample.txt -exec rm -i {} \;
 
 
 
-#### `cat` / `less`: Print out the contents of a file
+#### `cat` / `less`: Print the contents of a file
 
 ```bash
 cat -n [filename]  # ~, with line numbers
 
-# Overwrite some contents to a file
-cat > [filename]
-# (command-d to stop inputting)
+cat -s [filename]  # ~, and squeeze adjacent empty lines
 
-# Append some contents to a file
+# Overwrite some contents, to a file
+cat > [filename]  # (command-d to stop inputting)
+# Overwrite the contents of file1, to file2
+cat [file1] > [file2]
+# Merge the contents of file1, file2, file3, to file4
+cat [file1] [file2] [file3] > [file4]
+
+# Append some contents, to a file
 cat >> [filename]
-
-# ~, without loading the entire file into memory
-less [filename]
+# Append the contents of file1, to file2
+cat [file1] >> [file2]
 ```
 
 
 
-#### `head` / `tail`: Print out the head/tail-part contents of a file
+```bash
+# ~, without loading the entire file into memory
+less [filename]
+
+less -n [filename]  # ~, with line numbers
+
+less -s [filename]  # ~, and squeeze adjacent empty lines
+```
+
+
+
+#### `head` / `tail`: Print the head/tail-part contents of a file
 
 ```bash
 head -n 20 [filename]  # ~, with top 20 lines
@@ -302,9 +317,9 @@ grep -i 'UNix' [filename]  # case insensitive
 # (By default, grep matches the given string/pattern even if it is found as a substring in a file.)
 grep -w 'unix' [filename]  # only match the whole words in a file
 
-grep -l 'unix' [filename]  # only print out the filenames
+grep -l 'unix' [filename]  # only print the filenames
 
-grep -n 'unix' [filename]  # also print out the line number
+grep -n 'unix' [filename]  # also print the line number
 
 grep -c 'unix' [filename]  # print line counts, rather than the lines themselves
 ```
