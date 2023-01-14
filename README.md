@@ -49,34 +49,7 @@ Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linti
 * Check out `.vimrc`
 * Follow the instructions to create the directiories and install the corresponding plugins in the comments
 
-#### - Sublime Text 3 Preferences & Plugins
 
-For package control, packages and the corresponding plugins, check out https://www.youtube.com/watch?v=oHmPrjSzmwU
-
-* `Package control`
-* `Material Theme`
-* `vscode-icons`
-* `SublimeCodeIntel`
-* `BracketHighlighter`
-* `SublimeLinter`
-* `DocBlockr`
-* `GitGutter`
-
-Python:
-* `Anaconda`
-* `isort`
-* `SublimeLinter-pylint`
-* `SublimeLinter-flake8`
-
-Dev & Ops
-* `nginx`
-* `Dockerfile Syntax Highlighting`
-
-Note that in order to use `subl` command, do the following to create a soft link to that command-line tool:
-
-```bash
-ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-```
 
 #### - VSCode Extensions
 
