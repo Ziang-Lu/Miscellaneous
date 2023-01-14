@@ -1,18 +1,5 @@
 # This script will run when a non-login shell is spawned.
 
-alias ll='ls -alh'
-alias ..='cd ..'
-alias hi='history'
-alias free='free -ht'
-alias df='df -h'
-alias du='du -ha'
-alias sed='gsed'
-alias curl='curl -L'
-
-# Setting listing colors
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-
 # Setting for coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 

@@ -1,4 +1,6 @@
-source ~/.bashrc
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Ziang_Lu/.oh-my-zsh"
@@ -98,5 +100,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 echo 'Hello, Captain!'

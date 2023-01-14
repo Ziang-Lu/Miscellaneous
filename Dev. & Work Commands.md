@@ -2,18 +2,6 @@
 
 ## Unix Commands & Bash Basics
 
-### `tldr`: User-friendly replacement for `man`
-
->  https://github.com/tldr-pages/tldr
->
-> `pip3 install tldr`
-
-```bash
-tldr [command]
-```
-
-
-
 ### `env` / `printenv`: Print all the *global* environment variables
 
 Some built-in environment variables:
@@ -34,11 +22,11 @@ $HOSTNAME
 $RANDOM  # Generate a random number between [0, 2^15-1 (32,767)]
 ```
 
-Use `export` to export a local variable to global
+<u>Use `export` to export a local variable to global</u>
 
 
 
-### Bash Basics & Scripting
+### **Bash Basics & Scripting**
 
 ```bash
 #!/bin/zsh
@@ -135,76 +123,9 @@ greet "Brad" 26
 
 
 
-### System Monitoring
-
-#### `free`: Memory usage report
-
-```bash
-free -g  # ~, and print sizes in gigabytes
-# Valid size options: -b / -k (This is the default.) / -m / -g
-
-free -h  # ~, and print sizes in human-readable format
-
-free -t  # ~, and also report a total line
-```
-
-
-
-#### `top` / `htop`: Processes with top usage report
-
-`htop` is similar to `top`, but stronger.
-
-```bash
-htop -p [process_id]
-
-htop -U [username]
-
-# By default, sort by CPU usage
-htop -U [username] -o cpu
-# Valid sort-key options: pid / cpu / mem / threads
-```
-
-
-
-#### `df`: Disk usage (on all currently mounted file systems) report
-
-```bash
-df -h  # ~, and print sizes in human-readable format (power of 1024)
-```
-
-
-
-#### `du`: Disk usage (by files and directories) report
-
-```bash
-du -h  # ~, and print sizes in human-readable format (power of 1024)
-
-du -a  # Display an entry for each file in a file hierarchy
-```
-
-With `sort`, report the disk usage by files and directories <u>sorted by top sizes</u>
-
-```bash
-du -ha [directory_name] | sort -nr
-```
-
-
-
-***
-
-物理开发机满了怎么办？
-
-申请root权限，删除 `/tmp` 下面的一些无用文件：.pch结尾的文件都可以无脑删（krb开头的文件为登录开发机要用的，必须保留，其余都可以删）
-
-***
-
-
-
 ### File Operations
 
 #### `dirname` / `basename`: Show the directory name, and the filename, respectively
-
-e.g.,
 
 ```bash
 # basename without a specified trailing suffix
@@ -214,7 +135,7 @@ basename 'include/stdio.h' .h  # <=> basename -s .h 'include/stdio.h'
 
 
 
-#### `find`: Search for files and directories
+#### **`find`: Search for files and directories**
 
 ```bash
 find [where_to_search_from] [expression_determining_what_to_find] [-options] [what_to_find]
@@ -231,16 +152,24 @@ GFG
 ```
 
 ```bash
-# Search for a file with a specific name
-find ./GFG -name sample.txt
+# Search for nothing; essentially, list all the files and directories, recursively
+find ./GFG
 
+# List for directories
+find ./GFG -type d
+
+# Search for a file with a specific name
+find ./GFG -type f -name sample.txt
+find ./GFG -type f -iname sample.txt  # ~, ignoring cases
 # Search for files with a specific name pattern
-find ./GFG -name *.txt
-# ~, and delete them
-find ./GFG -name *.txt --delete
+find ./GFG -type f -name [pattern]
+find ./GFG -type f -name [pattern] --delete  # ~, and delete them
+
+# Search for files owned by a specifc user
+find ./GFG -type f -user [username]
 
 # Search for files with specific permission
-find ./GFG -perm /a=x
+find ./GFG -type f -perm /a=x
 
 # Search for empty files and directories
 find ./GFG -empty
@@ -250,12 +179,12 @@ find ./GFG -empty
 
 ```bash
 # Search a file with specific name, and delete with confirmation
-find ./GFG -name sample.txt -exec rm -i {} \;
+find ./GFG -name sample.txt -exec rm -i {} \;  # "\;" means to end the command.
 ```
 
 
 
-#### `cat` / `less`: Print the contents of a file
+#### **`cat` / `less`: Print the contents of a file**
 
 `less`: ~, without loading the entire file into memory
 
@@ -279,20 +208,18 @@ cat [file1] >> [file2]
 
 
 
-#### `head` / `tail`: Print the head/tail-part contents of a file
+#### **`head` / `tail`: Print the head/tail-part contents of a file**
 
 ```bash
-head -n 20 [filename]  # ~, with top 20 lines
+head -n 20 [filename]  # top 20 lines
 
-tail -n 20 [filename]  # ~, with bottom 20 lines
+tail -n 20 [filename]  # bottom 20 lines
 ```
 
-
-
-#### `diff`: Compare two files line by line
+<u>With the `-t` option (keeps refreshing), we can monitor a log file.</u>
 
 ```bash
-diff [file1] [file2]
+tail -n 20 -t [log_file]
 ```
 
 
@@ -361,6 +288,14 @@ sort -u [filename]  # ~, and remove duplicates
 
 
 
+#### `diff`: Compare two files line by line
+
+```bash
+diff [file1] [file2]
+```
+
+
+
 #### `tar` / `zip` & `unzip`: Compress and decompress
 
 e.g.,
@@ -382,6 +317,73 @@ zip source.zip src/
 
 unzip source.zip
 ```
+
+
+
+### System Monitoring
+
+#### `free`: Memory usage report
+
+> `brew install free`
+
+```bash
+free -g  # ~, and print sizes in gigabytes
+# Valid size options: -b / -k (This is the default.) / -m / -g
+
+free -h  # ~, and print sizes in human-readable format
+
+free -t  # ~, and also report a total line
+```
+
+
+
+#### `top` / `htop`: Processes with top usage report
+
+`htop` is similar to `top`, but stronger.
+
+```bash
+htop -p [process_id]
+
+htop -U [username]
+
+# By default, sort by CPU usage
+htop -U [username] -o cpu
+# Valid sort-key options: pid / cpu / mem / threads
+```
+
+
+
+#### `df`: Disk usage (on all currently mounted file systems) report
+
+```bash
+df -h  # ~, and print sizes in human-readable format (power of 1024)
+```
+
+
+
+#### `du`: Disk usage (by files and directories) report
+
+```bash
+du -h  # ~, and print sizes in human-readable format (power of 1024)
+
+du -a  # Display an entry for each file in a file hierarchy
+```
+
+<u>With `sort`, report the disk usage by files and directories, sorted by top sizes</u>
+
+```bash
+du -ha [directory_name] | sort -nr
+```
+
+
+
+***
+
+物理开发机满了怎么办？
+
+申请root权限，删除 `/tmp` 下面的一些无用文件：.pch结尾的文件都可以无脑删（krb开头的文件为登录开发机要用的，必须保留，其余都可以删）
+
+***
 
 
 
