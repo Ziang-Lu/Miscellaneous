@@ -4,7 +4,7 @@ alias hi='history'
 
 alias cat='cat -n'  # with line numbers
 alias less='less -n'  # with line numbers
-alias tail='tail -t'  # keeps refreshing (can be used to monitor a ever-growing log file)
+alias tail='tail -f'  # keeps refreshing (can be used to monitor a ever-growing log file)
 
 alias sed='gsed'
 
