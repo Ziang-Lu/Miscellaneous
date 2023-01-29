@@ -189,9 +189,9 @@ find ./GFG -name sample.txt -exec rm -i {} \;  # "\;" means to end the command.
 `less`: ~, without loading the entire file into memory
 
 ```bash
-cat/less -n [filename]  # ~, with line numbers
+cat/less -n [filename]  # with line numbers
 
-cat/less -s [filename]  # ~, and squeeze adjacent empty lines
+cat/less -s [filename]  # squeezing adjacent empty lines
 
 # Overwrite some contents, to a file
 cat > [filename]  # (command-d to stop inputting)
@@ -224,22 +224,37 @@ tail -n 20 -t [log_file]
 
 
 
-#### `grep`: Search a file for a particular pattern of characters
+#### `grep`: Search a file / files for a particular pattern of characters
 
 ```bash
+grep [pattern] [filename]
+
+grep [pattern] [some_files]
+# e.g.,
+grep [pattern] ./*.txt
+
+# From a directory, recursively
+grep -r [pattern] [where_to_search_from]
+
+# The pattern can be regular expression.
 grep '^unix' [filename]  # line start/end
 grep 'unix$' [filename]
+# e.g., Search a file for phone numbers
+grep -P '\d{3}-\d{3}-\d{4}' [filename]  # -P: Use PERL-compatible regular expression
 
-grep -i 'UNix' [filename]  # case insensitive
-
-# (By default, grep matches the given string/pattern even if it is found as a substring in a file.)
+# By default, "grep" matches the given string/pattern even if it is found as a substring in a file.
 grep -w 'unix' [filename]  # only match the whole words in a file
 
+grep -i 'UNix' [filename]  # ~, ignoring cases
+
+grep -n 'unix' [filename]  # with line number
+
+grep -B 3 'unix' [filename]  # with 3 lines beforehand
+grep -A 3 'unix' [filename]  # with 3 lines afterhand
+grep -C 3 'unix' [filename]  # with 3 lines beforehand and afterhand (i.e., context)
+
 grep -l 'unix' [filename]  # only print the filenames
-
-grep -n 'unix' [filename]  # also print the line number
-
-grep -c 'unix' [filename]  # print line counts, rather than the lines themselves
+grep -c 'unix' [filename]  # ~, with number of matches in each file
 ```
 
 
@@ -274,16 +289,16 @@ sort [filename]
 sort [filename] > [sorted_output_filename]
 
 # By default, blank lines or newline characters are used as record separators.
-sort -t '\t' [filename]  # ~, with '\t' as the record separator
+sort -t '\t' [filename]  # using '\t' as the record separator
 
 # By default, sort by ASCII codes
 sort -b [filename]  # ~, ignoring leading blank characters
 sort -f [filename]  # ~, ignoring cases
-sort -n numbers.txt  # ~, numerically
+sort -n numbers.txt  # numerically
 
-sort -r [filename]  # ~, in reverse order
+sort -r [filename]  # reverse order
 
-sort -u [filename]  # ~, and remove duplicates
+sort -u [filename]  # removing duplicates
 ```
 
 

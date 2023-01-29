@@ -2,9 +2,13 @@ alias ll='ls -alh'
 alias ..='cd ..'
 alias hi='history'
 
+alias clear_pyc='find ./ -name "*.pyc" -exec rm {} \;'
+
 alias cat='cat -n'  # with line numbers
 alias less='less -n'  # with line numbers
 alias tail='tail -f'  # keeps refreshing (can be used to monitor a ever-growing log file)
+
+alias grep='grep -r'  # From a directory, recursively
 
 alias sed='gsed'
 
