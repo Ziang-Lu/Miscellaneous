@@ -236,6 +236,9 @@ grep [pattern] ./*.txt
 # From a directory, recursively
 grep -r [pattern] [where_to_search_from]
 
+# With pipeline, from standard input
+git diff | grep [pattern] [filename]
+
 # The pattern can be regular expression.
 grep '^unix' [filename]  # line start/end
 grep 'unix$' [filename]
@@ -253,8 +256,9 @@ grep -B 3 'unix' [filename]  # with 3 lines beforehand
 grep -A 3 'unix' [filename]  # with 3 lines afterhand
 grep -C 3 'unix' [filename]  # with 3 lines beforehand and afterhand (i.e., context)
 
-grep -l 'unix' [filename]  # only print the filenames
 grep -c 'unix' [filename]  # ~, with number of matches in each file
+
+grep -l 'unix' [filename]  # only print the filenames
 ```
 
 
