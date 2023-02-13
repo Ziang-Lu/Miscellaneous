@@ -210,17 +210,9 @@ cat [file1] >> [file2]
 
 #### **`head` / `tail`: Print the head/tail-part contents of a file**
 
-```bash
-head -n 20 [filename]  # top 20 lines
-
-tail -n 20 [filename]  # bottom 20 lines
-```
-
-<u>With the `-t` option (keeps refreshing), we can monitor a log file.</u>
-
-```bash
-tail -n 20 -t [log_file]
-```
+| `head`                                  | `tail`                                                       |
+| --------------------------------------- | ------------------------------------------------------------ |
+| `head -n 20 [filename]  # top 20 lines` | `tail -n 20 [filename]  # bottom 20 lines`<br /><br />With the `-t` option (keeps refreshing), we can monitor a log file.<br />`tail -n 20 -t [log_file]` |
 
 
 
@@ -229,35 +221,30 @@ tail -n 20 -t [log_file]
 ```bash
 grep [pattern] [filename]
 
-grep [pattern] [some_files]
-# e.g.,
-grep [pattern] ./*.txt
-
+## 针对 [filename] 的一些可选项:
 # From a directory, recursively
 grep -r [pattern] [where_to_search_from]
-
-# With pipeline, from standard input
+# With pipeline, from stdin
 git diff | grep [pattern] [filename]
 
+## 针对 [pattern] 的一些可选项:
 # The pattern can be regular expression.
 grep '^unix' [filename]  # line start/end
 grep 'unix$' [filename]
 # e.g., Search a file for phone numbers
 grep -P '\d{3}-\d{3}-\d{4}' [filename]  # -P: Use PERL-compatible regular expression
 
+## 针对搜索过程的一些可选项:
 # By default, "grep" matches the given string/pattern even if it is found as a substring in a file.
 grep -w 'unix' [filename]  # only match the whole words in a file
-
 grep -i 'UNix' [filename]  # ~, ignoring cases
 
+## 针对展示结果的一些可选项
 grep -n 'unix' [filename]  # with line number
-
 grep -B 3 'unix' [filename]  # with 3 lines beforehand
 grep -A 3 'unix' [filename]  # with 3 lines afterhand
 grep -C 3 'unix' [filename]  # with 3 lines beforehand and afterhand (i.e., context)
-
 grep -c 'unix' [filename]  # ~, with number of matches in each file
-
 grep -l 'unix' [filename]  # only print the filenames
 ```
 
@@ -416,12 +403,32 @@ ip address
 
 
 
-####  `curl` / `wget`: File downloading / retrieving
+####  `curl`: Make a network request
 
 ```bash
-curl -L [file_url]  # download [file_url], and print to stdout
-curl -L [file_url] > [output_filename]  # ~, and dump to [output_filename]
+# Make a GET request
+curl [url]
+curl -i [url]  # In the response, also include headers
+# Return HTML codes / JSON / etc.
 
+curl -i -L [file_url]  # download [file_url], and print to stdout
+curl -i -L [file_url] > [output_filename]  # ~, and dump to [output_filename]
+
+# Make a POST request
+curl -d [data] -i [url]  # When we specify -d option along with some data to send, default to a POST request
+
+# Make a PUT request
+curl -X PUT -d [data] -i [url]  # ~, explicitly specify the method to be PUT
+
+# Make a DELETE request
+curl -X DELETE -i [url]
+```
+
+
+
+#### `wget`:  File downloading / retrieving
+
+```bash
 wget [file_url]  # download [file_url]
 wget -O - [file_url]  # ~, and print to stdout
 wget -O [output_filename] [file_url]  # ~, and dump to [output_filename]
