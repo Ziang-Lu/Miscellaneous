@@ -17,4 +17,4 @@ alias df='df -h'
 alias du='du -ha'
 
 # Networking
-alias curl='curl -L'
+alias curl='curl -i -L'  # In the response, also include headers
