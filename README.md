@@ -62,7 +62,6 @@ Themes
   * `One Dark Pro`
 
 General code highlighting
-  * `Rainbow Brackets`
   * `TODO Highlight`
   * `Prettify JSON`
   * `Rainbow CSV`
