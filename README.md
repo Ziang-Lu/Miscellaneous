@@ -93,6 +93,7 @@ Python
 Bash
 
 * `Bash IDE`
+* `ShellCheck`
 * `shell-format`
 
 Git
