@@ -70,6 +70,7 @@ General code highlighting
 
 C/C++
 * `C/C++ (by Microsoft)`
+* `Better C++ Syntax`
 * `cpplint`
   ```bash
   $ sudo pip3 install cpplint
