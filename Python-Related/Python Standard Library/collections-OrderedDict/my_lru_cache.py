@@ -55,8 +55,7 @@ class ItemNode:
 class MyLRUCache(dict):
     """
     My LRU Cache.
-    The idea is to decorate a dict with a doubly linked-list to keep track of
-    the access-order of the items.
+    The idea is to decorate a dict with a doubly linked-list to keep track of the access-order of the items.
     """
     __slots__ = ['_head', '_end', '_cache_size']
 
@@ -73,15 +72,13 @@ class MyLRUCache(dict):
         if key not in self:
             return None
         node = super().__getitem__(key)
-        # Note that since we need to keep access-order, we need to move the
-        # accessed node to the end
+        # Note that since we need to keep access-order, we need to move the accessed node to the end
         self._move_node_to_end(node)
         return node.value
 
     def _move_node_to_end(self, node: ItemNode) -> None:
         """
-        Private helper method to move the given node to the end of the doubly
-        linked-list.
+        Private helper method to move the given node to the end of the doubly linked-list.
         :param node: ItemNode
         """
         if node is self._end:  # No need to move
@@ -100,8 +97,7 @@ class MyLRUCache(dict):
 
     def _add_node_to_end(self, node: ItemNode) -> None:
         """
-        Helper method to add the given node to the end of the doubly
-        linked-list.
+        Helper method to add the given node to the end of the doubly linked-list.
         :param node: ItemNode
         """
         if not self._head and not self._end:
@@ -115,8 +111,7 @@ class MyLRUCache(dict):
         if key in self:
             node = super().__getitem__(key)
             node.val = value
-            # Note that since we need to keep access-order, we need to move the
-            # accessed node to the end
+            # Note that since we need to keep access-order, we need to move the accessed node to the end
             self._move_node_to_end(node)
         else:
             if len(self) >= self._cache_size:  # Reach cache limit

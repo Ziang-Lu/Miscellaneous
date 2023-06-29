@@ -52,9 +52,8 @@ class ListMetaclass(type):
 
 class MyList(list, metaclass=ListMetaclass):
     """
-    When the type "MyList" is created, Python interpreter will call
-    ListMetaclass.__new__() to create the type "MyList", so the "add()" method
-    will be bound to the type "MyList".
+    When the type "MyList" is created, Python interpreter will call  ListMetaclass.__new__() to create the type
+    "MyList", so the "add()" method will be bound to the type "MyList".
     """
     pass
 

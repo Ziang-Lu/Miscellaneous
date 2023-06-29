@@ -83,9 +83,8 @@ class ModelMetaclass(type):
         # Creating a new type (model / table)
         print(f'Creating model / table: {name}')
         # Define the columns of the model / table, and save it to an dictionary
-        # Then we can remove the class column attributes from the class, to
-        # avoid the later bound instance attributes (record values) overriding
-        # the corresponding same-name class column attributes
+        # Then we can remove the class column attributes from the class, to avoid the later bound instance attributes
+        # (record values) overriding the corresponding same-name class column attributes
         columns = {}
         for k, v in attrs.items():
             if isinstance(v, Column):
@@ -100,12 +99,10 @@ class ModelMetaclass(type):
 
 class Model(dict, metaclass=ModelMetaclass):
     """
-    When the base type for all the models / tables "Model" is created, Python
-    interpreter will call ModelMetaclass.__new__() to create the base type
-    "Model".
+    When the base type for all the models / tables "Model" is created, Python interpreter will call
+    ModelMetaclass.__new__() to create the base type "Model".
 
-    This class inherits "dict" type because when creating new objects, we want
-    to be able to use keyword arguments.
+    This class inherits "dict" type because when creating new objects, we want to be able to use keyword arguments.
     """
 
     def __init__(self, **kwargs):
@@ -154,8 +151,8 @@ class Model(dict, metaclass=ModelMetaclass):
 
 class User(Model):
     """
-    When the type (model / table) "User" is created, Python interpreter will
-    call ModelMetaclass.__new__() to create the type (model / table) "User"
+    When the type (model / table) "User" is created, Python interpreter will call ModelMetaclass.__new__() to create
+    the type (model / table) "User"
     """
     __tablename__ = 'users'
 
