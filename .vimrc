@@ -44,7 +44,7 @@ set cursorline
 
 " Display ruler
 set ruler
-set colorcolumn=80
+set colorcolumn=80,120
 highlight ColorColumn ctermbg=233
 
 " Do not automatically wrap lines on load
