@@ -15,6 +15,7 @@
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "none",
+    "terminal.integrated.persistentSessionScrollback": 10000,
     "terminal.integrated.scrollback": 10000,
     "bazel.buildifierExecutable": "/Users/bytedance/buildtools/bazel-bin/buildifier/darwin_amd64_stripped/buildifier",
     "bazel.buildifierFixOnFormat": true,
