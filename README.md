@@ -33,14 +33,6 @@ For Python auto-formatters like `Yapf`, check out https://github.com/google/yapf
 
 <br>
 
-### JavaScript / TypeScript Linter Configuration
-
-`ESLint` is responsible for checking syntax errors and problems, while `Prettier` for auto-formatting our JavaScript codes.
-
-Check out https://github.com/Ziang-Lu/JavaScript-Learning-Notes#javascript-linting and https://github.com/Ziang-Lu/JavaScript-Learning-Notes/blob/master/TypeScript-crash-course/TypeScript%20Learning%20Notes.md#typescript-linting
-
-<br>
-
 ### Text Editor
 
 #### - Vim   (for all)   Configuration
