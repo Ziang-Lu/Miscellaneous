@@ -46,12 +46,6 @@ For Python auto-formatters like `Yapf`, check out https://github.com/google/yapf
 
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 
-Themes
-  * `Material Theme`
-  * `Material Icon Theme`
-  * `Atom One Dark Theme`
-  * `One Dark Pro`
-
 General code highlighting
   * `TODO Highlight`
   * `Prettify JSON`
@@ -117,8 +111,6 @@ Dev & Ops
 <br>
 
 ### IDE (JetBrains Plugins)
-
-* `Material Theme UI`
 
 * `Shell Script`
 
